@@ -1,7 +1,5 @@
 import React from 'react';
-import {Skill} from "../components/skills/Skill";
-import {database} from "../modules/database/Database";
-import {number, select} from "@storybook/addon-knobs";
+import {select} from "@storybook/addon-knobs";
 import {Card} from "../components/elements/Card";
 import {Logo} from "../components/elements/Logo";
 
