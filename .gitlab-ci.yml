@@ -1,0 +1,39 @@
+image: node:12
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+build:front:
+  stage: build
+  before_script:
+    - yarn install
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - build
+
+deploy:prod:
+  image: python:latest
+  stage: deploy
+  allow_failure: false
+  before_script:
+    - pip install awscli
+    - mkdir ~/.aws/
+    - touch ~/.aws/credentials
+    - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
+  dependencies:
+    - build:front
+  script:
+    - aws s3 rm "s3://${ASW_S3_BUCKET}/" --exclude "*" --include "precache-manifest.*"
+    - aws s3 rm "s3://${ASW_S3_BUCKET}/static" --recursive
+    - aws s3 sync build "s3://${ASW_S3_BUCKET}/" --acl public-read
+  only:
+    - master
+  environment:
+    name: production
