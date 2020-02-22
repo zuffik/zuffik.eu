@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {makeStyles, Theme} from '@material-ui/core/styles';
 import {Redirect, Route, Switch} from "react-router";
 
 interface Props {
