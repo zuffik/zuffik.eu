@@ -10,7 +10,7 @@ export class Company extends Job {
         link: string,
         public readonly from: Moment,
         public readonly to?: Moment,
-        description?: string,
+        description?: string
     ) {
         super(id, label, image, link, description);
     }

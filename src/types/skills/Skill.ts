@@ -12,7 +12,7 @@ export class Skill extends Entity {
         public readonly jobs: (Job | School)[],
         public readonly projects: Project[],
         public readonly knowledge: number,
-        description?: string,
+        description?: string
     ) {
         super(id, label, image, link, description);
     }

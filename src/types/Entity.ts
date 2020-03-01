@@ -8,7 +8,6 @@ export abstract class Entity {
         public readonly label: string,
         public readonly image: EntityImage,
         public readonly link: string,
-        public readonly description?: string,
-    ) {
-    }
+        public readonly description?: string
+    ) {}
 }

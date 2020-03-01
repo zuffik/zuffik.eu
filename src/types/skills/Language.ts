@@ -1,5 +1,3 @@
 import {Skill} from "./Skill";
 
-export class Language extends Skill {
-
-}
+export class Language extends Skill {}

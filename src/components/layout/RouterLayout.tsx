@@ -1,14 +1,14 @@
-import * as React from 'react';
+import * as React from "react";
 import {Redirect, Route, Switch} from "react-router";
+import {Page} from "../page/Page";
 
-interface Props {
-}
+interface Props {}
 
 export const RouterLayout: React.FC<Props> = (props: Props): React.ReactElement => (
     <Switch>
         <Route path="/">
-            <>10 super áut</>
+            <Page />
         </Route>
-        <Redirect to="/"/>
+        <Redirect to="/" />
     </Switch>
 );

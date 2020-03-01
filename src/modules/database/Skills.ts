@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+import * as _ from "lodash";
 
 import {Framework} from "../../types/skills/Framework";
 import {Language} from "../../types/skills/Language";
@@ -7,234 +7,225 @@ import {Utility} from "../../types/skills/Utility";
 import {jobs} from "./Jobs";
 import {createImg} from "../../components/elements/Img";
 
-import imgAngular from  '../../static/skills/frameworks/angular.svg';
-import imgDotnetCore from  '../../static/skills/frameworks/dotnet-core.svg';
-import imgIonic from  '../../static/skills/frameworks/ionic.svg';
-import imgLaravel from  '../../static/skills/frameworks/laravel.svg';
-import imgGraphql from  '../../static/skills/frameworks/graphql.svg';
-import imgNestjs from  '../../static/skills/frameworks/nestjs.svg';
-import imgNodejs from  '../../static/skills/frameworks/nodejs.svg';
-import imgReact from  '../../static/skills/frameworks/react.svg';
-import imgTypescript from  '../../static/skills/frameworks/typescript.svg';
-import imgVuejs from  '../../static/skills/frameworks/vuejs.svg';
-import imgCpp from  '../../static/skills/languages/cpp.svg';
-import imgCss from  '../../static/skills/languages/css.svg';
-import imgHtml from  '../../static/skills/languages/html.svg';
-import imgJava from  '../../static/skills/languages/java.svg';
-import imgJavascript from  '../../static/skills/languages/javascript.svg';
-import imgPhp from  '../../static/skills/languages/php.svg';
-import imgAndroid from  '../../static/skills/platforms/android.svg';
-import imgApple from  '../../static/skills/platforms/apple.svg';
-import imgArduino from  '../../static/skills/platforms/arduino.svg';
-import imgBrowser from  '../../static/skills/platforms/browser.svg';
-import imgLinux from  '../../static/skills/platforms/linux.svg';
-import imgRaspberry from  '../../static/skills/platforms/raspberry.svg';
-import imgAws from  '../../static/skills/utilities/aws.svg';
-import imgGit from  '../../static/skills/utilities/git.svg';
-import imgGitlab from  '../../static/skills/utilities/gitlab.svg';
-import imgANN from  '../../static/skills/utilities/ann.svg';
+import imgAngular from "../../static/skills/frameworks/angular.svg";
+import imgDotnetCore from "../../static/skills/frameworks/dotnet-core.svg";
+import imgIonic from "../../static/skills/frameworks/ionic.svg";
+import imgLaravel from "../../static/skills/frameworks/laravel.svg";
+import imgGraphql from "../../static/skills/frameworks/graphql.svg";
+import imgNestjs from "../../static/skills/frameworks/nestjs.svg";
+import imgNodejs from "../../static/skills/frameworks/nodejs.svg";
+import imgReact from "../../static/skills/frameworks/react.svg";
+import imgTypescript from "../../static/skills/frameworks/typescript.svg";
+import imgVuejs from "../../static/skills/frameworks/vuejs.svg";
+import imgCypress from "../../static/skills/frameworks/cypress.png";
+import imgSelenium from "../../static/skills/frameworks/selenium.png";
+import imgCpp from "../../static/skills/languages/cpp.svg";
+import imgCss from "../../static/skills/languages/css.svg";
+import imgHtml from "../../static/skills/languages/html.svg";
+import imgJava from "../../static/skills/languages/java.svg";
+import imgJavascript from "../../static/skills/languages/javascript.svg";
+import imgPhp from "../../static/skills/languages/php.svg";
+import imgAndroid from "../../static/skills/platforms/android.svg";
+import imgApple from "../../static/skills/platforms/apple.svg";
+import imgArduino from "../../static/skills/platforms/arduino.svg";
+import imgBrowser from "../../static/skills/platforms/browser.svg";
+import imgLinux from "../../static/skills/platforms/linux.svg";
+import imgRaspberry from "../../static/skills/platforms/raspberry.svg";
+import imgAws from "../../static/skills/utilities/aws.svg";
+import imgGit from "../../static/skills/utilities/git.svg";
+import imgGitlab from "../../static/skills/utilities/gitlab.svg";
+import imgANN from "../../static/skills/utilities/ann.svg";
 
 export const skills = {
     frameworks: {
         angular: new Framework(
-            'angular',
-            'Angular',
+            "angular",
+            "Angular",
             createImg(imgAngular),
-            'https://angular.io/',
+            "https://angular.io/",
             [jobs.companies.freelancer],
-            [
-                jobs.projects.odfarmara
-            ],
+            [jobs.projects.odfarmara],
             20,
-            'basics'
+            "basics"
         ),
         dotnetCore: new Framework(
-            'dotnetCore',
-            'Dotnet Core',
+            "dotnetCore",
+            "Dotnet Core",
             createImg(imgDotnetCore),
-            'https://dotnet.microsoft.com/download',
-            [jobs.schools.friBc],
+            "https://dotnet.microsoft.com/download",
+            [jobs.schools.friBc, jobs.schools.friIng],
             [],
             20,
-            'Microsoft pfff...'
+            "Microsoft pfff..."
         ),
         ionic: new Framework(
-            'ionic',
-            'Ionic',
+            "ionic",
+            "Ionic",
             createImg(imgIonic),
-            'https://ionicframework.com/',
+            "https://ionicframework.com/",
             [jobs.companies.freelancer],
-            [
-                jobs.projects.odfarmara
-            ],
+            [jobs.projects.odfarmara],
             20,
-            'angular for mobiles'
+            "mobile angular"
         ),
         laravel: new Framework(
-            'laravel',
-            'Laravel',
+            "laravel",
+            "Laravel",
             createImg(imgLaravel),
-            'https://laravel.com',
+            "https://laravel.com",
             [jobs.companies.eliasItSolutions],
             [],
             60,
-            'best for PHP'
+            "best for PHP"
         ),
         graphql: new Framework(
-            'graphql',
-            'GraphQL',
+            "graphql",
+            "GraphQL",
             createImg(imgGraphql),
-            'https://graphql.org',
-            [jobs.companies.eliasItSolutions],
+            "https://graphql.org",
+            [jobs.companies.eliasItSolutions, jobs.schools.friBc, jobs.schools.friIng],
             [],
             60,
-            'I ♥ it'
+            "I ♥ it"
         ),
         nestjs: new Framework(
-            'nestjs',
-            'nest.js',
+            "nestjs",
+            "nest.js",
             createImg(imgNestjs),
-            'https://nestjs.com',
+            "https://nestjs.com",
             [jobs.companies.freelancer],
             [],
             40,
-            'I ♥ it'
+            "I ♥ it"
         ),
         nodejs: new Framework(
-            'nodejs',
-            'node.js',
+            "nodejs",
+            "Node.js",
             createImg(imgNodejs),
-            'https://nodejs.org',
+            "https://nodejs.org",
             [jobs.companies.eliasItSolutions],
-            [
-                jobs.projects.benefitPlus,
-                jobs.projects.emu,
-            ],
+            [jobs.projects.benefitPlus, jobs.projects.emu],
             80,
-            'multifunctional'
+            "multifunctional"
         ),
         react: new Framework(
-            'react',
-            'React',
+            "react",
+            "React",
             createImg(imgReact),
-            'https://react.com',
+            "https://react.com",
             [jobs.companies.eliasItSolutions],
-            [
-                jobs.projects.benefitPlus,
-                jobs.projects.emu,
-            ],
+            [jobs.projects.benefitPlus, jobs.projects.emu],
             90,
-            'I ♥ it'
+            "I ♥ it"
         ),
         reactNative: new Framework(
-            'reactNative',
-            'React Native',
+            "reactNative",
+            "React Native",
             createImg(imgReact),
-            'https://facebook.github.io/react-native/',
+            "https://facebook.github.io/react-native/",
             [jobs.companies.eliasItSolutions],
-            [
-                jobs.projects.benefitPlus,
-            ],
+            [jobs.projects.benefitPlus],
             85,
-            'react for mobiles'
+            "react for mobiles"
         ),
         typescript: new Framework(
-            'typescript',
-            'Typescript',
+            "typescript",
+            "TypeScript",
             createImg(imgTypescript),
-            'https://typescriptlang.org',
+            "https://typescriptlang.org",
             [jobs.companies.eliasItSolutions],
-            [
-                jobs.projects.benefitPlus,
-                jobs.projects.emu,
-            ],
+            [jobs.projects.benefitPlus, jobs.projects.emu],
             99,
-            'prevent bugs'
+            "prevent bugs"
         ),
         vuejs: new Framework(
-            'vuejs',
-            'Vue.js',
+            "vuejs",
+            "Vue.js",
             createImg(imgVuejs),
-            'https://vuejs.org',
+            "https://vuejs.org",
             [jobs.companies.eliasItSolutions],
             [],
             20,
-            'interesting...'
+            "interesting..."
+        ),
+        cypress: new Framework(
+            "cypress",
+            "Cypress",
+            createImg(imgCypress),
+            "https://cypress.io",
+            [],
+            [],
+            5,
+            "better selenium"
+        ),
+        selenium: new Framework(
+            "selenium",
+            "Selenium",
+            createImg(imgSelenium),
+            "https://selenium.dev",
+            [],
+            [],
+            5,
+            "necessary"
         ),
     },
     languages: {
         cpp: new Language(
-            'cpp',
-            'C++',
+            "cpp",
+            "C++",
             createImg(imgCpp),
-            'http://www.cplusplus.com/',
-            [jobs.schools.friBc],
+            "http://www.cplusplus.com/",
+            [..._.values(jobs.schools)],
             [],
             10,
-            'excellent'
+            "excellent"
         ),
         css: new Language(
-            'css',
-            'CSS',
+            "css",
+            "CSS",
             createImg(imgCss),
-            'https://css-tricks.com/',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://css-tricks.com/",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            'everyone knows'
+            "everyone knows"
         ),
         html: new Language(
-            'html',
-            'HTML',
+            "html",
+            "HTML",
             createImg(imgHtml),
-            'https://www.w3schools.com/html/',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://www.w3schools.com/html/",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            'everyone knows'
+            "everyone knows"
         ),
         java: new Language(
-            'java',
-            'Java',
+            "java",
+            "Java",
             createImg(imgJava),
-            'https://java.com',
+            "https://java.com",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             35,
-            'meh'
+            "meh"
         ),
         javascript: new Language(
-            'javascript',
-            'JavaScript',
+            "javascript",
+            "JavaScript",
             createImg(imgJavascript),
-            'https://javascript.com',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://javascript.com",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            'perfect'
+            "perfect"
         ),
         php: new Language(
-            'php',
-            'PHP',
+            "php",
+            "PHP",
             createImg(imgPhp),
-            'https://php.net',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://php.net",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             [
                 jobs.projects.odfarmara,
                 jobs.projects.albumovo,
@@ -243,143 +234,111 @@ export const skills = {
                 jobs.projects.svadobnedekoracie,
             ],
             99,
-            'was perfect'
+            "was perfect"
         ),
     },
     platforms: {
         android: new Platform(
-            'android',
-            'Android',
+            "android",
+            "Android",
             createImg(imgAndroid),
-            'https://android.com',
-            [
-                jobs.companies.eliasItSolutions,
-            ],
-            [
-                jobs.projects.benefitPlus
-            ],
+            "https://android.com",
+            [jobs.companies.eliasItSolutions],
+            [jobs.projects.benefitPlus],
             40,
-            's-l-o-w'
+            "s-l-o-w"
         ),
         apple: new Platform(
-            'apple',
-            'Apple',
+            "apple",
+            "Apple",
             createImg(imgApple),
-            'https://apple.com',
-            [
-                jobs.companies.eliasItSolutions,
-            ],
-            [
-                jobs.projects.benefitPlus
-            ],
+            "https://apple.com",
+            [jobs.companies.eliasItSolutions],
+            [jobs.projects.benefitPlus],
             30,
-            'my precious'
+            "my precious"
         ),
         arduino: new Platform(
-            'arduino',
-            'Arduino',
+            "arduino",
+            "Arduino",
             createImg(imgArduino),
-            'https://arduino.cc',
+            "https://arduino.cc",
             [jobs.companies.freelancer],
             [],
             30,
-            'can be anywhere'
+            "can be anywhere"
         ),
         browser: new Platform(
-            'browser',
-            'Browser',
+            "browser",
+            "Browser",
             createImg(imgBrowser),
-            'https://www.browserstack.com/',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://www.browserstack.com/",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            'bedrock'
+            "bedrock"
         ),
         linux: new Platform(
-            'linux',
-            'Linux',
+            "linux",
+            "Linux",
             createImg(imgLinux),
-            'https://linux.org',
-            [
-                jobs.companies.freelancer,
-                jobs.companies.mgm,
-                jobs.companies.eliasItSolutions,
-            ],
-            [
-                jobs.projects.estateVoke,
-                jobs.projects.odfarmara,
-            ],
+            "https://linux.org",
+            [jobs.companies.freelancer, jobs.companies.mgm, jobs.companies.eliasItSolutions],
+            [jobs.projects.estateVoke, jobs.projects.odfarmara],
             80,
-            'heaven (cloud)'
+            "heaven (cloud)"
         ),
         raspberry: new Platform(
-            'raspberry',
-            'Raspberry',
+            "raspberry",
+            "Raspberry",
             createImg(imgRaspberry),
-            'https://raspberrypi.org',
+            "https://raspberrypi.org",
             [jobs.companies.freelancer],
             [],
             80,
-            'smaller heaven'
+            "smaller heaven"
         ),
     },
     utilities: {
         aws: new Utility(
-            'aws',
-            'aws',
+            "aws",
+            "aws",
             createImg(imgAws),
-            'https://aws.amazon.com',
-            [
-                jobs.companies.eliasItSolutions,
-                jobs.companies.freelancer
-            ],
+            "https://aws.amazon.com",
+            [jobs.companies.eliasItSolutions, jobs.companies.freelancer],
             [],
             10,
-            'multifunctional heaven'
+            "universal heaven"
         ),
         git: new Utility(
-            'git',
-            'git',
+            "git",
+            "git",
             createImg(imgGit),
-            'https://git-scm.com',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://git-scm.com",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             90,
-            'conflict!'
+            "conflict!"
         ),
         gitlab: new Utility(
-            'gitlab',
-            'gitlab',
+            "gitlab",
+            "gitlab",
             createImg(imgGitlab),
-            'https://gitlab.com',
-            [
-                ..._.values(jobs.companies),
-                jobs.schools.sstv,
-                jobs.schools.friIng,
-            ],
+            "https://gitlab.com",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             90,
-            'best CI'
+            "best CI"
         ),
         ann: new Utility(
-            'ann',
-            'ANN',
+            "ann",
+            "ANN",
             createImg(imgANN),
-            'https://en.wikipedia.org/wiki/Artificial_neural_network',
-            [
-                jobs.schools.friIng,
-            ],
+            "https://en.wikipedia.org/wiki/Artificial_neural_network",
+            [jobs.schools.friIng],
             [],
             10,
-            'machine learning'
+            "machine learning"
         ),
     },
 };
