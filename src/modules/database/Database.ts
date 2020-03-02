@@ -32,6 +32,7 @@ export const database = new StaticData(
             new Link("zuffik", "https://github.com/zuffik"),
             new Link("zuffik", "https://pinterest.com/zuffik")
         ),
+        "Medvedzie, 027 44 Tvrdošín, Slovakia",
         {
             "sk-SK": "C2",
             "cs-CZ": "C1",
@@ -39,11 +40,20 @@ export const database = new StaticData(
             "es-ES": "A2",
             "de-DE": "A1",
         },
+        "https://s.gravatar.com/avatar/7d40d7be4408965747f2903a4350bd29?s=512",
         "Bc.",
         undefined,
+        L.get("programmer, react (and full-stack) developer"),
         L.get(
             "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms."
-        )
+        ),
+        [
+            L.get("Math optimization"),
+            L.get("Simulations"),
+            L.get("Algorithms"),
+            L.get("Data structures"),
+            L.get("A, B driver licence (200 000km driven)"),
+        ]
     ),
     // skills
     _.sortBy(_.values(skills.frameworks), (skill) => -skill.knowledge),

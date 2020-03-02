@@ -1,9 +1,9 @@
 export default {
     "United school Tvrdošín": "United school Tvrdošín",
     "High school": "High school",
-    "University of Žilina - FRI Bc.": "University of Žilina - FRI Bc.",
+    "University of Žilina - Bc.": "University of Žilina - Bc.",
     "Bachelor": "Bachelor",
-    "University of Žilina - FRI Ing.": "University of Žilina - FRI Ing.",
+    "University of Žilina - Ing.": "University of Žilina - Ing.",
     "Master": "Master",
     "Education level": "Education level",
 
@@ -68,4 +68,49 @@ export default {
         "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms",
     "Hello, I am zuffik, a web developer.": "Hello, I am zuffik, a web developer.",
     "All rights reserved.": "All rights reserved.",
+    "programmer, react (and full-stack) developer": "programmer, react (and full-stack) developer",
+    "Technical academy": "Technical academy",
+    "Faculty of management and information technology": "Faculty of management and information technology",
+
+    "Personal information": "Personal information",
+    "Address": "Address",
+    "E-mail": "E-mail",
+    "Phone": "Phone",
+    "Birthday": "Birthday",
+    "Employment": "Employment",
+
+    "Full-stack web developer (mainly with PHP, react, ...)":
+        "Full-stack web developer (mainly with PHP, react, ...)",
+    "PHP web developer": "PHP web developer",
+    "Full-stack web developer (PHP, jquery, javascript, ...)":
+        "Full-stack web developer (PHP, jquery, javascript, ...)",
+    "Multiple projects for many clients (react.js, node.js, php, ...)":
+        "Multiple projects for many clients (react.js, node.js, php, ...)",
+
+    "Language skills": "Language skills",
+
+    "sk-SK": "Slovak",
+    "en-US": "English",
+    "cs-CZ": "Czech",
+    "es-ES": "Spanish",
+    "de-DE": "German",
+
+    "A1": "beginner (A1)",
+    "A2": "advanced (A2)",
+    "B1": "intermediate (B1)",
+    "B2": "upper-intermediate (B2)",
+    "C1": "expert (C1)",
+    "C2": "native speaker (C2)",
+
+    "Other skills": "Other skills",
+    "Senior": "Senior",
+    "Medior": "Medior",
+    "Junior": "Junior",
+
+    "Other knowledges": "Other knowledges",
+    "Math optimization": "Math optimization",
+    "Simulations": "Simulations",
+    "Algorithms": "Algorithms",
+    "Data structures": "Data structures",
+    "A, B driver licence (200 000km driven)": "A, B driver licence (200 000km driven)",
 };

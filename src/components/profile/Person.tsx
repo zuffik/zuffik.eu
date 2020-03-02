@@ -38,17 +38,10 @@ export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
             <SectionTitle>{L.get("About me")}</SectionTitle>
             <Grid container spacing={3} justify="space-between">
                 <Grid item>
-                    <Avatar
-                        src="https://s.gravatar.com/avatar/7d40d7be4408965747f2903a4350bd29?s=512"
-                        variant="rounded"
-                        classes={{root: styles.avatar}}
-                    />
+                    <Avatar src={props.person.photo} variant="rounded" classes={{root: styles.avatar}} />
                 </Grid>
                 <Grid item xs={12} sm={6} classes={{root: styles.rightItems}}>
-                    <Typography variant="h4">
-                        {props.person.titleBefore} {props.person.firstName} {props.person.lastName}{" "}
-                        {props.person.titleAfter}
-                    </Typography>
+                    <Typography variant="h4">{props.person.fullName}</Typography>
                     <Typography classes={{root: styles.bio}}>{props.person.bio}</Typography>
                     <Grid container spacing={1}>
                         <Grid item>

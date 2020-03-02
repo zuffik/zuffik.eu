@@ -9,6 +9,7 @@ export class School extends Job {
         image: EntityImage,
         link: string,
         public readonly level: string,
+        public readonly section: string,
         public readonly from: Moment,
         public readonly to?: Moment,
         description?: string

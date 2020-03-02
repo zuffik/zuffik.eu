@@ -30,7 +30,8 @@ export const jobs = {
             moment("2016-04-01"),
             L.get(
                 "As a freelancer I participated in various project with various languages and platforms. It was all on the beginning of my career."
-            )
+            ),
+            L.get("Full-stack web developer (mainly with PHP, react, ...)")
         ),
         pokec: new Company(
             "pokec",
@@ -41,7 +42,8 @@ export const jobs = {
             moment("2016-09-01"),
             L.get(
                 "Pokec is the first division of the largest Slovak company Azet.sk. It is a dating web which almost every Slovak citizen is aware of."
-            )
+            ),
+            L.get("PHP web developer")
         ),
         mgm: new Company(
             "mgm",
@@ -52,7 +54,8 @@ export const jobs = {
             moment("2018-06-01"),
             L.get(
                 "Living is important part for every one of us. It is even better when your houm is bought online. CRM is one of the tool which can make it possible."
-            )
+            ),
+            L.get("Full-stack web developer (PHP, jquery, javascript, ...)")
         ),
         eliasItSolutions: new Company(
             "eliasItSolutions",
@@ -63,7 +66,8 @@ export const jobs = {
             undefined,
             L.get(
                 "My current employment. So much opportunities to do various jobs. I've learnt most of the things here."
-            )
+            ),
+            L.get("Multiple projects for many clients (react.js, node.js, php, ...)")
         ),
     },
     projects: {
@@ -138,26 +142,29 @@ export const jobs = {
             createImg(imgSSTV),
             "https://sstv.sk",
             L.get("High school"),
+            L.get("Technical academy"),
             moment("2011-09-01"),
             moment("2015-06-01")
         ),
         friBc: new School(
             "friBc",
-            L.get("University of Žilina - FRI Bc."),
+            L.get("University of Žilina - Bc."),
             createImg(imgFRI),
             "https://fri.uniza.sk",
             L.get("Bachelor"),
+            L.get("Faculty of management and information technology"),
             moment("2015-09-01"),
             moment("2018-06-01")
         ),
         friIng: new School(
             "friIng",
-            L.get("University of Žilina - FRI Ing."),
+            L.get("University of Žilina - Ing."),
             createImg(imgFRI),
             "https://fri.uniza.sk",
             L.get("Master"),
-            moment("2018-09-01"),
-            moment("2020-06-01")
+            L.get("Faculty of management and information technology"),
+            moment("2018-09-01")
+            //moment("2020-06-01")
         ),
     },
 };
