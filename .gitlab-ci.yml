@@ -44,7 +44,8 @@ deploy:print:
   stage: print
   allow_failure: false
   before_script:
-    - apt-get install chromium-browser
+    - apt-get update -y
+    - apt-get install -y chromium-browser
     - pip install awscli
     - mkdir ~/.aws/
     - touch ~/.aws/credentials
