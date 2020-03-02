@@ -1,7 +1,7 @@
 import * as React from "react";
 import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Person as PersonType} from "../../types/person/Person";
-import {Avatar, Button, Grid, Typography} from "@material-ui/core";
+import {Avatar, Box, Button, Grid, Typography} from "@material-ui/core";
 import {SectionTitle} from "../section/SectionTitle";
 import {L} from "../../modules/i18n/Locale";
 import {Facebook, GithubCircle, Gmail, Instagram, Phone, Pinterest, Twitter, Whatsapp} from "mdi-material-ui";
@@ -86,9 +86,16 @@ export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
                             </ContactIcon>
                         </Grid>
                     </Grid>
-                    <Button href={`/${currentShortLanguage}.pdf`} target="_blank">
-                        {L.get("Interested in my CV?")}
-                    </Button>
+                    <Box mt={2}>
+                        <Button
+                            href={`/${currentShortLanguage}.pdf`}
+                            target="_blank"
+                            variant="contained"
+                            color="secondary"
+                        >
+                            {L.get("Download my CV")}
+                        </Button>
+                    </Box>
                 </Grid>
             </Grid>
         </>

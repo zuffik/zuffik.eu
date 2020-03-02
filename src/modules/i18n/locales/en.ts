@@ -114,5 +114,5 @@ export default {
     "Data structures": "Data structures",
     "A, B driver licence (200 000km driven)": "A, B driver licence (200 000km driven)",
 
-    "Interested in my CV?": "Interested in my CV?",
+    "Download my CV": "Download my CV",
 };
