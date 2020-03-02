@@ -41,7 +41,7 @@ deploy:prod:
 
 deploy:print:
   image: python:latest
-  stage: deploy
+  stage: print
   allow_failure: false
   before_script:
     - apt-get install chromium-browser
@@ -59,8 +59,8 @@ deploy:print:
     - mv output.pdf cvs/es.pdf
     - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/sk
     - mv output.pdf cvs/sk.pdf
-    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/cs
-    - mv output.pdf cvs/cs.pdf
+    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
+    - mv output.pdf cvs/cz.pdf
     - aws s3 sync cvs "s3://${ASW_S3_BUCKET}/" --acl public-read
   artifacts:
     paths:
