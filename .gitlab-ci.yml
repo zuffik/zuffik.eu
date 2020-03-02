@@ -56,13 +56,13 @@ deploy:print:
   dependencies:
     - deploy:prod
   script:
-    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/en
+    - google-chrome-stable --no-sandbox --headless --disable-gpu --print-to-pdf https://zuffik.eu/en
     - mv output.pdf cvs/en.pdf
-    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/es
+    - google-chrome-stable --no-sandbox --headless --disable-gpu --print-to-pdf https://zuffik.eu/es
     - mv output.pdf cvs/es.pdf
-    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/sk
+    - google-chrome-stable --no-sandbox --headless --disable-gpu --print-to-pdf https://zuffik.eu/sk
     - mv output.pdf cvs/sk.pdf
-    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
+    - google-chrome-stable --no-sandbox --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
     - mv output.pdf cvs/cz.pdf
     - aws s3 sync cvs "s3://${ASW_S3_BUCKET}/" --acl public-read
   artifacts:
