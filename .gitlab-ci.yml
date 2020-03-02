@@ -46,7 +46,7 @@ deploy:print:
   before_script:
     - apt-get update -y
     - apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils libappindicator3-1
-    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || true
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
     - pip install awscli
     - mkdir ~/.aws/
@@ -56,13 +56,13 @@ deploy:print:
   dependencies:
     - deploy:prod
   script:
-    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/en
+    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/en
     - mv output.pdf cvs/en.pdf
-    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/es
+    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/es
     - mv output.pdf cvs/es.pdf
-    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/sk
+    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/sk
     - mv output.pdf cvs/sk.pdf
-    - chromium-browser --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
+    - google-chrome-stable --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
     - mv output.pdf cvs/cz.pdf
     - aws s3 sync cvs "s3://${ASW_S3_BUCKET}/" --acl public-read
   artifacts:
