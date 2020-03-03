@@ -3,7 +3,6 @@ image: node:12
 stages:
   - compress
   - build
-  - optimize
   - deploy
   - postprocess
 
@@ -37,17 +36,6 @@ build:front:
     paths:
       - build
 
-optimize:build:
-  stage: optimize
-  before_script:
-    - apt-get update -y
-    - apt-get install -y gzip
-  script:
-    - echo "test"
-  artifacts:
-    paths:
-      - build
-
 deploy:prod:
   image: python:latest
   stage: deploy
@@ -60,7 +48,7 @@ deploy:prod:
     - touch ~/.aws/credentials
     - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
   dependencies:
-    - optimize:build
+    - build:front
   script:
     - aws s3 rm "s3://${ASW_S3_BUCKET}/" --exclude "*" --include "precache-manifest.*"
     - aws s3 rm "s3://${ASW_S3_BUCKET}/static" --recursive
