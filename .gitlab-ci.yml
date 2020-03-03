@@ -43,7 +43,7 @@ optimize:build:
     - apt-get update -y
     - apt-get install -y gzip
   script:
-    - gzip build/*
+    - gzip build/*.*
     - gzip build/static/*
   artifacts:
     paths:
