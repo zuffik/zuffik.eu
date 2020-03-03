@@ -53,6 +53,7 @@ deploy:prod:
     - aws s3 rm "s3://${ASW_S3_BUCKET}/" --exclude "*" --include "precache-manifest.*"
     - aws s3 rm "s3://${ASW_S3_BUCKET}/static" --recursive
     - aws s3 sync build "s3://${ASW_S3_BUCKET}/" --acl public-read
+    - aws s3 cp "s3://${ASW_S3_BUCKET}/" "s3://${ASW_S3_BUCKET}/" --metadata-directive REPLACE --recursive --cache-control max-age="$CACHE_ITEMS_AGE"
     - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths '/*'
   only:
     - master
