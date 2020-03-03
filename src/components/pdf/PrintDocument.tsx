@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Box, Typography} from "@material-ui/core";
+import {Box, Theme, Typography} from "@material-ui/core";
 import {PersonPrint} from "../profile/PersonPrint";
 import {Person} from "../../types/person/Person";
 import {PrintSection} from "./PrintSection";
@@ -9,6 +9,7 @@ import {School} from "../../types/jobs/School";
 import {Company} from "../../types/jobs/Company";
 import * as _ from "lodash";
 import {Skill} from "../../types/skills/Skill";
+import {makeStyles} from "@material-ui/core/styles";
 
 interface Props {
     person: Person;
@@ -16,6 +17,12 @@ interface Props {
     jobs: Company[];
     skills: Skill[];
 }
+
+const useStyles = makeStyles((theme: Theme) => ({
+    block: {
+        display: "block",
+    },
+}));
 
 const getSkillKnowledgeLabel = (knowledge: number): string => {
     if (knowledge > 90) {
@@ -28,6 +35,7 @@ const getSkillKnowledgeLabel = (knowledge: number): string => {
 };
 
 export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement => {
+    const styles = useStyles(props);
     return (
         <Box display="none" displayPrint="block">
             <PersonPrint person={props.person} />
@@ -61,8 +69,8 @@ export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement
                         </PrintSectionTitle>,
                         <Typography>
                             <strong>{school.label}</strong>
-                            <div>{school.section}</div>
-                            <div>{school.level}</div>
+                            <span className={styles.block}>{school.section}</span>
+                            <span className={styles.block}>{school.level}</span>
                         </Typography>,
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
@@ -77,7 +85,7 @@ export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement
                         </PrintSectionTitle>,
                         <Typography>
                             <strong>{job.label}</strong>
-                            <div>{job.primaryTask}</div>
+                            <span className={styles.block}>{job.primaryTask}</span>
                         </Typography>,
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
