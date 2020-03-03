@@ -43,8 +43,7 @@ optimize:build:
     - apt-get update -y
     - apt-get install -y gzip
   script:
-    - gzip build/*.*
-    - gzip build/static/**/*.*
+    - echo "test"
   artifacts:
     paths:
       - build
@@ -54,6 +53,8 @@ deploy:prod:
   stage: deploy
   allow_failure: false
   before_script:
+    - python -m venv venv
+    - source venv/bin/activate
     - pip install awscli
     - mkdir ~/.aws/
     - touch ~/.aws/credentials
