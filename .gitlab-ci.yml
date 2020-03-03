@@ -1,20 +1,50 @@
 image: node:12
 
 stages:
+  - compress
   - build
+  - optimize
   - deploy
-  - print
+  - postprocess
 
 cache:
   paths:
     - node_modules
 
+compress:images:
+  stage: compress
+  before_script:
+    - yarn install
+  script:
+    - yarn compress:images "$TINIFY_API_KEY"
+  cache:
+    paths:
+      - original
+  artifacts:
+    paths:
+      - original
+      - src/static
+
 build:front:
   stage: build
+  dependencies:
+    - compress:images
   before_script:
     - yarn install
   script:
     - yarn build
+  artifacts:
+    paths:
+      - build
+
+optimize:build:
+  stage: optimize
+  before_script:
+    - apt-get update -y
+    - apt-get install -y gzip
+  script:
+    - gzip build/*
+    - gzip build/static/*
   artifacts:
     paths:
       - build
@@ -29,7 +59,7 @@ deploy:prod:
     - touch ~/.aws/credentials
     - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
   dependencies:
-    - build:front
+    - optimize:build
   script:
     - aws s3 rm "s3://${ASW_S3_BUCKET}/" --exclude "*" --include "precache-manifest.*"
     - aws s3 rm "s3://${ASW_S3_BUCKET}/static" --recursive
@@ -42,13 +72,15 @@ deploy:prod:
 
 deploy:print:
   image: python:latest
-  stage: print
+  stage: postprocess
   allow_failure: false
   before_script:
     - apt-get update -y
     - apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils libappindicator3-1
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+    - python -m venv venv
+    - source venv/bin/activate
     - pip install awscli
     - mkdir ~/.aws/
     - touch ~/.aws/credentials
@@ -66,6 +98,9 @@ deploy:print:
     - google-chrome-stable --no-sandbox --headless --disable-gpu --print-to-pdf https://zuffik.eu/cz
     - mv output.pdf cvs/cz.pdf
     - aws s3 sync cvs "s3://${ASW_S3_BUCKET}/" --acl public-read
+  cache:
+    paths:
+      - venv
   artifacts:
     paths:
       - cvs

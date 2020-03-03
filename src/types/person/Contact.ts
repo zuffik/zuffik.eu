@@ -9,6 +9,7 @@ export class Contact {
         public readonly facebook: Link,
         public readonly twitter: Link,
         public readonly github: Link,
-        public readonly pinterest: Link
+        public readonly pinterest: Link,
+        public readonly linkedIn: Link
     ) {}
 }

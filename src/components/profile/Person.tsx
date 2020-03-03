@@ -4,7 +4,17 @@ import {Person as PersonType} from "../../types/person/Person";
 import {Avatar, Box, Button, Grid, Typography} from "@material-ui/core";
 import {SectionTitle} from "../section/SectionTitle";
 import {L} from "../../modules/i18n/Locale";
-import {Facebook, GithubCircle, Gmail, Instagram, Phone, Pinterest, Twitter, Whatsapp} from "mdi-material-ui";
+import {
+    Facebook,
+    GithubCircle,
+    Gmail,
+    Instagram,
+    Phone,
+    Pinterest,
+    Twitter,
+    Whatsapp,
+    Linkedin,
+} from "mdi-material-ui";
 import {ContactIcon} from "./ContactIcon";
 import {currentShortLanguage} from "../../modules/i18n/Language";
 
@@ -58,6 +68,11 @@ export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
                         <Grid item>
                             <ContactIcon link={props.person.contact.email}>
                                 <Gmail color="inherit" />
+                            </ContactIcon>
+                        </Grid>
+                        <Grid item>
+                            <ContactIcon link={props.person.contact.linkedIn}>
+                                <Linkedin color="inherit" />
                             </ContactIcon>
                         </Grid>
                         <Grid item>

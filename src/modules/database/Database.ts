@@ -30,7 +30,8 @@ export const database = new StaticData(
             new Link("Kristián Žuffa", "https://facebook.com/zuffik"),
             new Link("Kristián Žuffa", "https://twitter.com/KristianZuffa"),
             new Link("zuffik", "https://github.com/zuffik"),
-            new Link("zuffik", "https://pinterest.com/zuffik")
+            new Link("zuffik", "https://pinterest.com/zuffik"),
+            new Link("Kristián Žuffa", "https://www.linkedin.com/in/kristian-zuffa/")
         ),
         "Medvedzie, 027 44 Tvrdošín, Slovakia",
         {
