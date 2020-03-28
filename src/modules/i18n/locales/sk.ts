@@ -34,7 +34,7 @@ export default {
 
     "basics": "základy",
     "Microsoft pfff...": "Microsoft pfff...",
-    "mobile angular": "angular pre mobily",
+    "mobile angular": "angular",
     "best for PHP": "najlepšie PHP",
     "I ♥ it": "láska",
     "multifunctional": "multifunkčné",
