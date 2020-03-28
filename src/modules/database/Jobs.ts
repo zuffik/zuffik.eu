@@ -93,7 +93,7 @@ export const jobs = {
         fitradio: new Project(
             "fitradio",
             "Fitradio",
-            createImg(imgEmu),
+            createImg(imgFitradio),
             "https://fitradio.sk/",
             L.get("React Native app for streaming real time sound and in-app songs.")
         ),
