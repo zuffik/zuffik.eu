@@ -9,6 +9,7 @@ import imgFreelancer from "../../static/jobs/companies/freelancer.svg";
 import imgAlbumovo from "../../static/jobs/projects/albumovo.png";
 import imgBenefitPlus from "../../static/jobs/projects/benefit-plus.svg";
 import imgEmu from "../../static/jobs/projects/emu.svg";
+import imgFitradio from "../../static/jobs/projects/fitradio.jpg";
 import imgEstatevoke from "../../static/jobs/projects/estatevoke.png";
 import imgOdfarmara from "../../static/jobs/projects/odfarmara.svg";
 import imgPenzionTimea from "../../static/jobs/projects/penziontimea.svg";
@@ -53,7 +54,7 @@ export const jobs = {
             moment("2016-06-01"),
             moment("2018-06-01"),
             L.get(
-                "Living is important part for every one of us. It is even better when your houm is bought online. CRM is one of the tool which can make it possible."
+                "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible."
             ),
             L.get("Full-stack web developer (PHP, jquery, javascript, ...)")
         ),
@@ -71,15 +72,6 @@ export const jobs = {
         ),
     },
     projects: {
-        albumovo: new Project(
-            "albumovo",
-            "Albumovo.sk",
-            createImg(imgAlbumovo),
-            "https://albumovo.sk",
-            L.get(
-                "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project."
-            )
-        ),
         benefitPlus: new Project(
             "benefitPlus",
             "BenefitPlus",
@@ -95,17 +87,15 @@ export const jobs = {
             createImg(imgEmu),
             "https://www.emu.hr/",
             L.get(
-                "React.js first project I have ever done with professionality. There were many concepts I have understood."
+                "React.js first project I have ever done with profesionality. There were many concepts I have understood."
             )
         ),
-        estateVoke: new Project(
-            "estateVoke",
-            "ESTATeVOKE",
-            createImg(imgEstatevoke),
-            "https://www.estatevoke.sk/",
-            L.get(
-                "Indirect communication with client and entire process of buying estates is captured in this application."
-            )
+        fitradio: new Project(
+            "fitradio",
+            "Fitradio",
+            createImg(imgEmu),
+            "https://fitradio.sk/",
+            L.get("React Native app for streaming real time sound and in-app songs.")
         ),
         odfarmara: new Project(
             "odfarmara",
@@ -132,6 +122,24 @@ export const jobs = {
             "https://penziontimea.sk/",
             L.get(
                 "If you are starting a family with a great celebration (marriage) you'll certainly need some stuff to make it possible."
+            )
+        ),
+        albumovo: new Project(
+            "albumovo",
+            "Albumovo.sk",
+            createImg(imgAlbumovo),
+            "https://albumovo.sk",
+            L.get(
+                "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project."
+            )
+        ),
+        estateVoke: new Project(
+            "estateVoke",
+            "ESTATeVOKE",
+            createImg(imgEstatevoke),
+            "https://www.estatevoke.sk/",
+            L.get(
+                "Indirect communication with client and entire process of buying estates is captured in this application."
             )
         ),
     },

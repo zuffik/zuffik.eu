@@ -11,16 +11,16 @@ export default {
         "As a freelancer I participated in various project with various languages and platforms. It was all on the beginning of my career.",
     "Pokec is the first division of the largest Slovak company Azet.sk. It is a dating web which almost every Slovak citizen is aware of.":
         "Pokec is the first division of the largest Slovak company Azet.sk. It is a dating web which almost every Slovak citizen is aware of.",
-    "Living is important part for every one of us. It is even better when your houm is bought online. CRM is one of the tool which can make it possible.":
-        "Living is important part for every one of us. It is even better when your houm is bought online. CRM is one of the tool which can make it possible.",
+    "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible.":
+        "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible.",
     "My current employment. So much opportunities to do various jobs. I've learnt most of the things here.":
         "My current employment. So much opportunities to do various jobs. I've learnt most of the things here.",
     "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project.":
         "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project.",
     "My current project, based on react.js. I love it, there is still so much to learn and this project took me higher.":
         "My current project, based on react.js. I love it, there is still so much to learn and this project took me higher.",
-    "React.js first project I have ever done with professionality. There were many concepts I have understood.":
-        "React.js first project I have ever done with professionality. There were many concepts I have understood.",
+    "React.js first project I have ever done with profesionality. There were many concepts I have understood.":
+        "React.js first project I have ever done with profesionality. There were many concepts I have understood.",
     "Indirect communication with client and entire process of buying estates is captured in this application.":
         "Indirect communication with client and entire process of buying estates is captured in this application.",
     "Are you living healthy? You can order material for baking, cooking and eating food from actual farmers from web or your phone.":
@@ -29,6 +29,8 @@ export default {
         "Skiing or hiking. This web page is prepared for you to order right vacation in beautiful village Zuberec in Roháče.",
     "If you are starting a family with a great celebration (marriage) you'll certainly need some stuff to make it possible.":
         "If you are starting a family with a great celebration (marriage) you'll certainly need some stuff to make it possible.",
+    "React Native app for streaming real time sound and in-app songs.":
+        "React Native app for streaming real time sound and in-app songs.",
 
     "basics": "basics",
     "Microsoft pfff...": "Microsoft pfff...",
