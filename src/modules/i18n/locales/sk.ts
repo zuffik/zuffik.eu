@@ -34,7 +34,7 @@ export default {
 
     "basics": "základy",
     "Microsoft pfff...": "Microsoft pfff...",
-    "angular for mobiles": "angular pre mobily",
+    "mobile angular": "angular pre mobily",
     "best for PHP": "najlepšie PHP",
     "I ♥ it": "láska",
     "multifunctional": "multifunkčné",
@@ -54,7 +54,7 @@ export default {
     "bedrock": "základ",
     "heaven (cloud)": "nebo (cloud)",
     "smaller heaven": "menšie nebo",
-    "multifunctional heaven": "multifunkčné nebo",
+    "universal heaven": "univerzálne nebo",
     "conflict!": "konflikt!",
     "best CI": "top CI",
     "machine learning": "machine learning",

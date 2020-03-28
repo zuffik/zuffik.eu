@@ -34,7 +34,7 @@ export default {
 
     "basics": "basics",
     "Microsoft pfff...": "Microsoft pfff...",
-    "angular for mobiles": "angular for mobiles",
+    "mobile angular": "mobile angular",
     "best for PHP": "best for PHP",
     "I ♥ it": "I ♥ it",
     "multifunctional": "multifunctional",
@@ -54,7 +54,7 @@ export default {
     "bedrock": "bedrock",
     "heaven (cloud)": "heaven (cloud)",
     "smaller heaven": "smaller heaven",
-    "multifunctional heaven": "multifunctional heaven",
+    "universal heaven": "universal heaven",
     "conflict!": "conflict!",
     "best CI": "best CI",
     "machine learning": "machine learning",

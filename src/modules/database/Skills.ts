@@ -6,6 +6,7 @@ import {Platform} from "../../types/skills/Platform";
 import {Utility} from "../../types/skills/Utility";
 import {jobs} from "./Jobs";
 import {createImg} from "../../components/elements/Img";
+import {L} from "../i18n/Locale";
 
 import imgAngular from "../../static/skills/frameworks/angular.svg";
 import imgDotnetCore from "../../static/skills/frameworks/dotnet-core.svg";
@@ -46,7 +47,7 @@ export const skills = {
             [jobs.companies.freelancer],
             [jobs.projects.odfarmara],
             20,
-            "basics"
+            L.get("basics")
         ),
         dotnetCore: new Framework(
             "dotnetCore",
@@ -56,7 +57,7 @@ export const skills = {
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             20,
-            "Microsoft pfff..."
+            L.get("Microsoft pfff...")
         ),
         ionic: new Framework(
             "ionic",
@@ -66,7 +67,7 @@ export const skills = {
             [jobs.companies.freelancer],
             [jobs.projects.odfarmara],
             20,
-            "mobile angular"
+            L.get("mobile angular")
         ),
         laravel: new Framework(
             "laravel",
@@ -76,7 +77,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [],
             60,
-            "best for PHP"
+            L.get("best for PHP")
         ),
         graphql: new Framework(
             "graphql",
@@ -86,7 +87,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions, jobs.schools.friBc, jobs.schools.friIng],
             [],
             60,
-            "I ♥ it"
+            L.get("I ♥ it")
         ),
         nestjs: new Framework(
             "nestjs",
@@ -96,7 +97,7 @@ export const skills = {
             [jobs.companies.freelancer],
             [],
             40,
-            "I ♥ it"
+            L.get("I ♥ it")
         ),
         nodejs: new Framework(
             "nodejs",
@@ -106,7 +107,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus, jobs.projects.emu],
             80,
-            "multifunctional"
+            L.get("multifunctional")
         ),
         react: new Framework(
             "react",
@@ -116,7 +117,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus, jobs.projects.emu],
             90,
-            "I ♥ it"
+            L.get("I ♥ it")
         ),
         reactNative: new Framework(
             "reactNative",
@@ -126,7 +127,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus],
             85,
-            "react for mobiles"
+            L.get("react for mobiles")
         ),
         typescript: new Framework(
             "typescript",
@@ -136,7 +137,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus, jobs.projects.emu],
             99,
-            "prevent bugs"
+            L.get("prevent bugs")
         ),
         vuejs: new Framework(
             "vuejs",
@@ -146,7 +147,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [],
             20,
-            "interesting..."
+            L.get("interesting...")
         ),
         cypress: new Framework(
             "cypress",
@@ -156,7 +157,7 @@ export const skills = {
             [],
             [],
             5,
-            "better selenium"
+            L.get("better selenium")
         ),
         selenium: new Framework(
             "selenium",
@@ -166,7 +167,7 @@ export const skills = {
             [],
             [],
             5,
-            "necessary"
+            L.get("necessary")
         ),
     },
     languages: {
@@ -178,7 +179,7 @@ export const skills = {
             [..._.values(jobs.schools)],
             [],
             10,
-            "excellent"
+            L.get("excellent")
         ),
         css: new Language(
             "css",
@@ -188,7 +189,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            "everyone knows"
+            L.get("everyone knows")
         ),
         html: new Language(
             "html",
@@ -198,7 +199,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            "everyone knows"
+            L.get("everyone knows")
         ),
         java: new Language(
             "java",
@@ -208,7 +209,7 @@ export const skills = {
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             35,
-            "meh"
+            L.get("meh")
         ),
         javascript: new Language(
             "javascript",
@@ -218,7 +219,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            "perfect"
+            L.get("perfect")
         ),
         php: new Language(
             "php",
@@ -234,7 +235,7 @@ export const skills = {
                 jobs.projects.svadobnedekoracie,
             ],
             99,
-            "was perfect"
+            L.get("was perfect")
         ),
     },
     platforms: {
@@ -246,7 +247,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus],
             40,
-            "s-l-o-w"
+            L.get("s-l-o-w")
         ),
         apple: new Platform(
             "apple",
@@ -256,7 +257,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions],
             [jobs.projects.benefitPlus],
             30,
-            "my precious"
+            L.get("my precious")
         ),
         arduino: new Platform(
             "arduino",
@@ -266,7 +267,7 @@ export const skills = {
             [jobs.companies.freelancer],
             [],
             30,
-            "can be anywhere"
+            L.get("can be anywhere")
         ),
         browser: new Platform(
             "browser",
@@ -276,7 +277,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             99,
-            "bedrock"
+            L.get("bedrock")
         ),
         linux: new Platform(
             "linux",
@@ -286,7 +287,7 @@ export const skills = {
             [jobs.companies.freelancer, jobs.companies.mgm, jobs.companies.eliasItSolutions],
             [jobs.projects.estateVoke, jobs.projects.odfarmara],
             80,
-            "heaven (cloud)"
+            L.get("heaven (cloud)")
         ),
         raspberry: new Platform(
             "raspberry",
@@ -296,7 +297,7 @@ export const skills = {
             [jobs.companies.freelancer],
             [],
             80,
-            "smaller heaven"
+            L.get("smaller heaven")
         ),
     },
     utilities: {
@@ -308,7 +309,7 @@ export const skills = {
             [jobs.companies.eliasItSolutions, jobs.companies.freelancer],
             [],
             10,
-            "universal heaven"
+            L.get("universal heaven")
         ),
         git: new Utility(
             "git",
@@ -318,7 +319,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             90,
-            "conflict!"
+            L.get("conflict!")
         ),
         gitlab: new Utility(
             "gitlab",
@@ -328,7 +329,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             90,
-            "best CI"
+            L.get("best CI")
         ),
         ann: new Utility(
             "ann",
@@ -338,7 +339,7 @@ export const skills = {
             [jobs.schools.friIng],
             [],
             10,
-            "machine learning"
+            L.get("machine learning")
         ),
     },
 };
