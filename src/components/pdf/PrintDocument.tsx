@@ -98,12 +98,14 @@ export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
-            <PrintSection title={L.get("Other skills")}>
+            <PrintSection title={L.get("Other skills")} small>
                 {
-                    props.skills.map((skill) => [
-                        <PrintSectionTitle>{skill.label}</PrintSectionTitle>,
-                        <Typography>{getSkillKnowledgeLabel(skill.knowledge)}</Typography>,
-                    ]) as [React.ReactNode, React.ReactNode][]
+                    props.skills
+                        .sort((a, b) => (a.knowledge < b.knowledge ? 1 : -1))
+                        .map((skill) => [
+                            <PrintSectionTitle>{skill.label}</PrintSectionTitle>,
+                            <Typography>{getSkillKnowledgeLabel(skill.knowledge)}</Typography>,
+                        ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
             <PrintSection title={L.get("Other knowledges")}>

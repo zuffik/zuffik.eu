@@ -14,8 +14,10 @@ import imgEstatevoke from "../../static/jobs/projects/estatevoke.png";
 import imgOdfarmara from "../../static/jobs/projects/odfarmara.svg";
 import imgPenzionTimea from "../../static/jobs/projects/penziontimea.svg";
 import imgSvadobneDekoracie from "../../static/jobs/projects/svadobnedekoracie.png";
+import imgNpm from "../../static/jobs/projects/npm.svg";
 import imgMGM from "../../static/jobs/companies/mgm.png";
 import imgPokec from "../../static/jobs/companies/pokec.png";
+import imgSprinx from "../../static/jobs/companies/sprinx.png";
 import imgFRI from "../../static/jobs/schools/fri.png";
 import imgSSTV from "../../static/jobs/schools/sstv.png";
 import {L} from "../i18n/Locale";
@@ -27,7 +29,7 @@ export const jobs = {
             "Freelancer",
             createImg(imgFreelancer),
             "http://localhost",
-            moment("2014-07-01"),
+            moment("2012-07-01"),
             moment("2016-04-01"),
             L.get(
                 "As a freelancer I participated in various project with various languages and platforms. It was all on the beginning of my career."
@@ -51,7 +53,7 @@ export const jobs = {
             "Reality MGM",
             createImg(imgMGM),
             "https://realitymgm.sk",
-            moment("2016-06-01"),
+            moment("2017-06-01"),
             moment("2018-06-01"),
             L.get(
                 "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible."
@@ -64,11 +66,20 @@ export const jobs = {
             createImg(imgEliasItSolutions),
             "https://elias-itsolutions.com/",
             moment("2018-06-01"),
-            undefined,
-            L.get(
-                "My current employment. So much opportunities to do various jobs. I've learnt most of the things here."
-            ),
+            moment("2020-07-01"),
+            L.get("So much opportunities to do various jobs. I've learnt most of the things here."),
             L.get("Multiple projects for many clients (react.js, node.js, php, ...)")
+        ),
+        sprinx: new Company(
+            "sprinx",
+            "Sprinx Systems",
+            createImg(imgSprinx),
+            "http://sprinx.com",
+            moment("2020-07-01"),
+            undefined,
+            L.get("Steady, full time job as senior frontend developer."),
+            L.get("My task is to develop BenefitPlus application with its subprojects (React development)."),
+            true
         ),
     },
     projects: {
@@ -142,6 +153,20 @@ export const jobs = {
                 "Indirect communication with client and entire process of buying estates is captured in this application."
             )
         ),
+        cucumberGenerator: new Project(
+            "cucumberGenerator",
+            "cucumber-generator",
+            createImg(imgNpm),
+            "https://www.npmjs.com/package/cucumber-generator",
+            L.get("Generate step definitions for cucumber scenarios.")
+        ),
+        mailtrapClient: new Project(
+            "mailtrapClient",
+            "mailtrap-client",
+            createImg(imgNpm),
+            "https://www.npmjs.com/package/mailtrap-client",
+            L.get("Mailtrap.io api client with some added features.")
+        ),
     },
     schools: {
         sstv: new School(
@@ -171,8 +196,8 @@ export const jobs = {
             "https://fri.uniza.sk",
             L.get("Master"),
             L.get("Faculty of management and information technology"),
-            moment("2018-09-01")
-            //moment("2020-06-01")
+            moment("2018-09-01"),
+            moment("2020-06-01")
         ),
     },
 };

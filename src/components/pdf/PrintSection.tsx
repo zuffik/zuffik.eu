@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/core/styles";
 interface Props {
     children: ([React.ReactNode, React.ReactNode] | [React.ReactNode])[];
     title?: string;
+    small?: boolean;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -26,10 +27,10 @@ export const PrintSection: React.FC<Props> = (props: Props): React.ReactElement 
             )}
             {props.children.map(([label, value], i) => (
                 <React.Fragment key={i}>
-                    <Grid item xs={value ? 4 : 12}>
+                    <Grid item xs={value ? (props.small ? 2 : 4) : 12}>
                         {label}
                     </Grid>
-                    <Grid item xs={value ? 8 : 12}>
+                    <Grid item xs={value ? (props.small ? 2 : 8) : 12}>
                         {value}
                     </Grid>
                 </React.Fragment>

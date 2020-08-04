@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme: Theme) => ({
         textAlign: "right",
     },
     jobs: {
-        overflow: "auto",
+        overflowX: "auto",
+        overflowY: "hidden",
         display: "flex",
         flexDirection: "row",
         "&::-webkit-scrollbar": {

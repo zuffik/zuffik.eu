@@ -11,7 +11,8 @@ export class Company extends Job {
         public readonly from: Moment,
         public readonly to?: Moment,
         description?: string,
-        public readonly primaryTask?: string
+        public readonly primaryTask?: string,
+        public readonly hidden: boolean = false
     ) {
         super(id, label, image, link, description);
     }

@@ -13,8 +13,8 @@ export default {
         "Pokec bola prvá divízia najväčšej slovenskej internetovej spoločnosti Azet.sk. Takmer každý Slovák pozná túto zoznamku.",
     "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible.":
         "Bývanie je pre každého z nás veľmi dôležité. Ešte lepšie ak si svoj domov môžete kúpiť online. CRM je jeden z nástrojov, vďaka ktorému je to možné uskutočniť",
-    "My current employment. So much opportunities to do various jobs. I've learnt most of the things here.":
-        "Moje aktuálne zamestnanie. Cítim tu veľkú otvorenosť pracovať na rôznych pozíciach. Vďaka tejto práci som sa naučil podstatnú časť svojich znalostí.",
+    "So much opportunities to do various jobs. I've learnt most of the things here.":
+        "Cítim tu veľkú otvorenosť pracovať na rôznych pozíciach. Vďaka tejto práci som sa naučil podstatnú časť svojich znalostí.",
     "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project.":
         "Jeden z prvých e-shopov založených na mojom vlastnom CMS s použitím čistého PHP. V rámci tohto projektu som sa učil tento jazyk (a trocha SEO).",
     "My current project, based on react.js. I love it, there is still so much to learn and this project took me higher.":
@@ -66,9 +66,10 @@ export default {
     "now": "teraz",
 
     "About me": "O mne",
-    "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms.":
-        "Som študent Fakulty riadenia a informatiky na Žilinskej univerzite. Programujem od roku 2010 a pracoval som na mnohých projektoch na rôznych platformách.",
-    "Hello, I am zuffik, a web developer.": "Ahojte, som zuffik, web developer.",
+    "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms.":
+        "Bol som študentom Fakulty riadenia a informatiky na Žilinskej univerzite. Programujem od roku 2010 a pracoval som na mnohých projektoch na rôznych platformách.",
+    "Hello, I am zuffik, a fullstack web / QA / DevOps developer.":
+        "Ahojte, som zuffik, fullstack web / QA / DevOps developer.",
     "All rights reserved.": "Všetky práva vyhradené.",
     "programmer, react (and full-stack) developer": "programátor, react (a full-stack) developer",
     "Technical academy": "Technické lýceum",
@@ -117,4 +118,26 @@ export default {
     "A, B driver licence (200 000km driven)": "Vodičský preukaz A, B (najazdených 200 000km)",
 
     "Download my CV": "Stiahnuť životopis",
+    "design": "design",
+    "testing": "testing",
+    "great FE": "skvelý FE",
+    "games": "hry",
+    "better C++": "lepšie C++",
+    "math docs": "dokumentácie",
+    "all docs": "dokumentácie",
+    "elegant DB": "elegantné",
+    "fast math": "matematika",
+    "fast db": "rýchla db",
+    "alt CI": "alternatívne CI",
+    "custom CI": "vlastné CI",
+    "progress": "pokrok",
+    "Github CI": "Github CI",
+    "all together": "všetko spolu",
+    "dummy testing": "dummy testing",
+    "Generate step definitions for cucumber scenarios.": "Vytváranie definícií krokov z cucumber scenárov.",
+    "Mailtrap.io api client with some added features.": "Mailtrap.io api klient s vecami navyše.",
+    "Steady, full time job as senior frontend developer.":
+        "Stála práca na plný úväzok ako senior frontend developer.",
+    "My task is to develop BenefitPlus application with its subprojects (React development).":
+        "Mojou úlohou je vyvíjať aplikáciu BenefitPlus spolu s podprojektami.",
 };

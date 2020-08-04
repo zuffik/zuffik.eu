@@ -8,15 +8,19 @@ interface Props {
     skill: SkillType;
 }
 
+const maxScaleDown = 0.3;
+
 const useStyles = makeStyles((theme: Theme) => ({
-    root: {
+    root: (props: Props) => ({
         padding: theme.spacing(2),
         width: 130,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-    },
+        transformOrigin: "center",
+        transform: `scale(${1 - maxScaleDown + (props.skill.knowledge / 100) * maxScaleDown})`,
+    }),
     image: {
         height: 75,
     },

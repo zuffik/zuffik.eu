@@ -21,11 +21,13 @@ export const SkillList: React.FC<Props> = (props: Props): React.ReactElement => 
         <>
             <SectionTitle>{L.get("Skills")}</SectionTitle>
             <Grid container spacing={2} justify="space-between">
-                {total.map((skill) => (
-                    <Grid item key={skill.id}>
-                        <Skill skill={skill} />
-                    </Grid>
-                ))}
+                {total
+                    .sort((a, b) => (a.knowledge < b.knowledge ? 1 : -1))
+                    .map((skill) => (
+                        <Grid item key={skill.id}>
+                            <Skill skill={skill} />
+                        </Grid>
+                    ))}
             </Grid>
         </>
     );

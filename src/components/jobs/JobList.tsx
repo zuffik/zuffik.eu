@@ -26,11 +26,13 @@ export const JobList: React.FC<Props> = (props: Props): React.ReactElement => {
             </Grid>
             <SectionTitle>{L.get("Career")}</SectionTitle>
             <Grid container spacing={2} justify="space-between">
-                {props.companies.map((company) => (
-                    <Grid item key={company.id} xs={12} sm={6} lg={4}>
-                        <Job job={company} />
-                    </Grid>
-                ))}
+                {props.companies
+                    .filter((j) => !j.hidden)
+                    .map((company) => (
+                        <Grid item key={company.id} xs={12} sm={6} lg={4}>
+                            <Job job={company} />
+                        </Grid>
+                    ))}
             </Grid>
             <SectionTitle>{L.get("Education")}</SectionTitle>
             <Grid container spacing={2} justify="space-between">

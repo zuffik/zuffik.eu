@@ -13,8 +13,8 @@ export default {
         "Pokec is the first division of the largest Slovak company Azet.sk. It is a dating web which almost every Slovak citizen is aware of.",
     "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible.":
         "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible.",
-    "My current employment. So much opportunities to do various jobs. I've learnt most of the things here.":
-        "My current employment. So much opportunities to do various jobs. I've learnt most of the things here.",
+    "So much opportunities to do various jobs. I've learnt most of the things here.":
+        "So much opportunities to do various jobs. I've learnt most of the things here.",
     "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project.":
         "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project.",
     "My current project, based on react.js. I love it, there is still so much to learn and this project took me higher.":
@@ -66,9 +66,10 @@ export default {
     "now": "now",
 
     "About me": "About me",
-    "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms.":
-        "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms",
-    "Hello, I am zuffik, a web developer.": "Hello, I am zuffik, a web developer.",
+    "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms.":
+        "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms",
+    "Hello, I am zuffik, a fullstack web / QA / DevOps developer.":
+        "Hello, I am zuffik, a fullstack web / QA / DevOps developer.",
     "All rights reserved.": "All rights reserved.",
     "programmer, react (and full-stack) developer": "programmer, react (and full-stack) developer",
     "Technical academy": "Technical academy",
@@ -117,4 +118,26 @@ export default {
     "A, B driver licence (200 000km driven)": "A, B driver licence (200 000km driven)",
 
     "Download my CV": "Download my CV",
+    "design": "design",
+    "testing": "testing",
+    "great FE": "great FE",
+    "games": "games",
+    "better C++": "better C++",
+    "math docs": "math docs",
+    "all docs": "all docs",
+    "elegant DB": "elegant DB",
+    "fast math": "fast math",
+    "fast db": "fast db",
+    "alt CI": "alt CI",
+    "custom CI": "custom CI",
+    "progress": "progress",
+    "Github CI": "Github CI",
+    "all together": "all together",
+    "dummy testing": "dummy testing",
+    "Generate step definitions for cucumber scenarios.": "Generate step definitions for cucumber scenarios.",
+    "Mailtrap.io api client with some added features.": "Mailtrap.io api client with some added features.",
+    "Steady, full time job as senior frontend developer.":
+        "Steady, full time job as senior frontend developer.",
+    "My task is to develop BenefitPlus application with its subprojects (React development).":
+        "My task is to develop BenefitPlus application with its subprojects (React development).",
 };

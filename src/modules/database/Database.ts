@@ -42,11 +42,11 @@ export const database = new StaticData(
             "de-DE": "A1",
         },
         "https://s.gravatar.com/avatar/7d40d7be4408965747f2903a4350bd29?s=512",
-        "Bc.",
+        "Ing.",
         undefined,
         L.get("programmer, react (and full-stack) developer"),
         L.get(
-            "I am student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms."
+            "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms."
         ),
         [
             L.get("Math optimization"),

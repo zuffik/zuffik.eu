@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     rightItems: {
         textAlign: "justify",
         [theme.breakpoints.up("md")]: {
-            direction: "rtl",
+            textAlign: "right",
         },
     },
 }));
@@ -51,10 +51,10 @@ export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
                 <Grid item>
                     <Avatar src={props.person.photo} variant="rounded" classes={{root: styles.avatar}} />
                 </Grid>
-                <Grid item xs={12} sm={6} classes={{root: styles.rightItems}}>
+                <Grid item xs={12} md={6} classes={{root: styles.rightItems}}>
                     <Typography variant="h4">{props.person.fullName}</Typography>
                     <Typography classes={{root: styles.bio}}>{props.person.bio}</Typography>
-                    <Grid container spacing={1}>
+                    <Grid container spacing={1} justify="flex-end">
                         <Grid item>
                             <ContactIcon link={props.person.contact.facebook}>
                                 <Facebook color="inherit" />
