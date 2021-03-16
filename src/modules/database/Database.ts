@@ -7,7 +7,7 @@ import {Person} from "../../types/person/Person";
 import moment from "moment";
 import {Contact} from "../../types/person/Contact";
 import {Link} from "../../types/person/Link";
-import {L} from "../i18n/Locale";
+import {defineMessage} from "react-intl";
 
 for (const category of _.values(skills)) {
     for (const skill of _.values<Skill>(category)) {
@@ -44,16 +44,24 @@ export const database = new StaticData(
         "https://s.gravatar.com/avatar/7d40d7be4408965747f2903a4350bd29?s=512",
         "Ing.",
         undefined,
-        L.get("programmer, react (and full-stack) developer"),
-        L.get(
-            "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms."
-        ),
+        defineMessage({
+            id: "db.me.highlights",
+            defaultMessage: "programmer, react (and full-stack) developer",
+        }),
+        defineMessage({
+            id: "db.me.bio",
+            defaultMessage:
+                "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms.",
+        }),
         [
-            L.get("Math optimization"),
-            L.get("Simulations"),
-            L.get("Algorithms"),
-            L.get("Data structures"),
-            L.get("A, B driver licence (200 000km driven)"),
+            defineMessage({id: "db.me.otherSkills.mathOptimization", defaultMessage: "Math optimization"}),
+            defineMessage({id: "db.me.otherSkills.simulations", defaultMessage: "Simulations"}),
+            defineMessage({id: "db.me.otherSkills.algorithms", defaultMessage: "Algorithms"}),
+            defineMessage({id: "db.me.otherSkills.dataStructures", defaultMessage: "Data structures"}),
+            defineMessage({
+                id: "db.me.otherSkills.driverLicence",
+                defaultMessage: "A, B driver licence (200 000km driven)",
+            }),
         ]
     ),
     // skills

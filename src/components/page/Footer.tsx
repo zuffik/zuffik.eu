@@ -3,7 +3,7 @@ import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Person as PersonType} from "../../types/person/Person";
 import {Person} from "../profile/Person";
 import {Typography} from "@material-ui/core";
-import {L} from "../../modules/i18n/Locale";
+import {useIntl} from "react-intl";
 
 interface Props {
     person: PersonType;
@@ -21,11 +21,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const Footer: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
+    const intl = useIntl();
     return (
         <>
             <Person person={props.person} />
             <Typography classes={{root: styles.copyright}}>
-                Copyright &copy; zuffik.eu {L.get("All rights reserved.")}
+                Copyright &copy; zuffik.eu{" "}
+                {intl.formatMessage({defaultMessage: "All rights reserved.", id: "general.copyright"})}
             </Typography>
         </>
     );

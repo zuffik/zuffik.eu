@@ -3,10 +3,9 @@ import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Person as PersonType} from "../../types/person/Person";
 import {Avatar, Box, Button, Grid, Typography} from "@material-ui/core";
 import {SectionTitle} from "../section/SectionTitle";
-import {L} from "../../modules/i18n/Locale";
 import {
     Facebook,
-    GithubCircle,
+    Github as GithubCircle,
     Gmail,
     Instagram,
     Phone,
@@ -17,6 +16,7 @@ import {
 } from "mdi-material-ui";
 import {ContactIcon} from "./ContactIcon";
 import {currentShortLanguage} from "../../modules/i18n/Language";
+import {useIntl} from "react-intl";
 
 interface Props {
     person: PersonType;
@@ -43,17 +43,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
+    const intl = useIntl();
 
     return (
         <>
-            <SectionTitle>{L.get("About me")}</SectionTitle>
+            <SectionTitle>
+                {intl.formatMessage({defaultMessage: "About me", id: "general.aboutMe"})}
+            </SectionTitle>
             <Grid container spacing={3} justify="space-between">
                 <Grid item>
                     <Avatar src={props.person.photo} variant="rounded" classes={{root: styles.avatar}} />
                 </Grid>
                 <Grid item xs={12} md={6} classes={{root: styles.rightItems}}>
                     <Typography variant="h4">{props.person.fullName}</Typography>
-                    <Typography classes={{root: styles.bio}}>{props.person.bio}</Typography>
+                    <Typography classes={{root: styles.bio}}>
+                        {props.person.bio ? intl.formatMessage(props.person.bio) : ""}
+                    </Typography>
                     <Grid container spacing={1} justify="flex-end">
                         <Grid item>
                             <ContactIcon link={props.person.contact.facebook}>
@@ -108,7 +113,7 @@ export const Person: React.FC<Props> = (props: Props): React.ReactElement => {
                             variant="contained"
                             color="secondary"
                         >
-                            {L.get("Download my CV")}
+                            {intl.formatMessage({defaultMessage: "Download my CV", id: "general.downloadCV"})}
                         </Button>
                     </Box>
                 </Grid>

@@ -1,6 +1,7 @@
 import {Moment} from "moment";
 import {Contact} from "./Contact";
 import {LanguageSkills} from "./LanguageSkills";
+import {LocalizationResource} from "../LocalizationResource";
 
 export class Person {
     constructor(
@@ -13,9 +14,9 @@ export class Person {
         public readonly photo: string,
         public readonly titleBefore?: string,
         public readonly titleAfter?: string,
-        public readonly highlights?: string,
-        public readonly bio?: string,
-        public readonly other: string[] = []
+        public readonly highlights?: LocalizationResource,
+        public readonly bio?: LocalizationResource,
+        public readonly other: LocalizationResource[] = []
     ) {}
 
     public get fullName(): string {

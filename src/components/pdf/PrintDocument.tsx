@@ -4,12 +4,12 @@ import {PersonPrint} from "../profile/PersonPrint";
 import {Person} from "../../types/person/Person";
 import {PrintSection} from "./PrintSection";
 import {PrintSectionTitle} from "./PrintSectionTitle";
-import {L} from "../../modules/i18n/Locale";
 import {School} from "../../types/jobs/School";
 import {Company} from "../../types/jobs/Company";
 import * as _ from "lodash";
 import {Skill} from "../../types/skills/Skill";
 import {makeStyles} from "@material-ui/core/styles";
+import {defineMessage, useIntl} from "react-intl";
 
 interface Props {
     person: Person;
@@ -26,90 +26,125 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const getSkillKnowledgeLabel = (knowledge: number): string => {
     if (knowledge > 90) {
-        return L.get("Senior");
+        return defineMessage("Senior");
     }
     if (knowledge > 50) {
-        return L.get("Medior");
+        return defineMessage("Medior");
     }
-    return L.get("Junior");
+    return defineMessage("Junior");
 };
 
 export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
+    const intl = useIntl();
     return (
         <Box display="none" displayPrint="block">
             <PersonPrint person={props.person} />
-            <PrintSection title={L.get("Personal information")}>
+            <PrintSection
+                title={intl.formatMessage({
+                    defaultMessage: "Personal information",
+                    id: "general.personalInfo",
+                })}
+            >
                 {[
                     [
-                        <PrintSectionTitle>{L.get("Address")}</PrintSectionTitle>,
+                        <PrintSectionTitle>
+                            {intl.formatMessage({defaultMessage: "Address", id: "general.address"})}
+                        </PrintSectionTitle>,
                         <Typography>{props.person.address}</Typography>,
                     ],
                     [
-                        <PrintSectionTitle>{L.get("E-mail")}</PrintSectionTitle>,
+                        <PrintSectionTitle>
+                            {intl.formatMessage({defaultMessage: "E-mail", id: "general.email"})}
+                        </PrintSectionTitle>,
                         <Typography>{props.person.contact.email.label}</Typography>,
                     ],
                     [
-                        <PrintSectionTitle>{L.get("Phone")}</PrintSectionTitle>,
+                        <PrintSectionTitle>
+                            {intl.formatMessage({defaultMessage: "Phone", id: "general.phone"})}
+                        </PrintSectionTitle>,
                         <Typography>{props.person.contact.phone.label}</Typography>,
                     ],
                     [
-                        <PrintSectionTitle>{L.get("Birthday")}</PrintSectionTitle>,
+                        <PrintSectionTitle>
+                            {intl.formatMessage({defaultMessage: "Birthday", id: "general.birthday"})}
+                        </PrintSectionTitle>,
                         <Typography>{props.person.birthDay.format("DD.MM.YYYY")}</Typography>,
                     ],
                 ]}
             </PrintSection>
-            <PrintSection title={L.get("Education")}>
+            <PrintSection title={intl.formatMessage({defaultMessage: "Education", id: "general.education"})}>
                 {
                     props.schools.map((school) => [
                         <PrintSectionTitle>
-                            {school.from.format("MM.YYYY")}
+                            {school.from!.format("MM.YYYY")}
                             {" - "}
-                            {school.to?.format("MM.YYYY") || L.get("now")}
+                            {school.to?.format("MM.YYYY") ||
+                                intl.formatMessage({defaultMessage: "now", id: "general.now"})}
                         </PrintSectionTitle>,
                         <Typography>
-                            <strong>{school.label}</strong>
-                            <span className={styles.block}>{school.section}</span>
-                            <span className={styles.block}>{school.level}</span>
+                            <strong>{intl.formatMessage(school.label)}</strong>
+                            <span className={styles.block}>{intl.formatMessage(school.section)}</span>
+                            <span className={styles.block}>{intl.formatMessage(school.level)}</span>
                         </Typography>,
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
-            <PrintSection title={L.get("Employment")}>
+            <PrintSection
+                title={intl.formatMessage({defaultMessage: "Employment", id: "general.employment"})}
+            >
                 {
                     props.jobs.map((job) => [
                         <PrintSectionTitle>
                             {job.from.format("MM.YYYY")}
                             {" - "}
-                            {job.to?.format("MM.YYYY") || L.get("now")}
+                            {job.to?.format("MM.YYYY") ||
+                                intl.formatMessage({defaultMessage: "now", id: "general.now"})}
                         </PrintSectionTitle>,
                         <Typography>
-                            <strong>{job.label}</strong>
-                            <span className={styles.block}>{job.primaryTask}</span>
+                            <strong>{intl.formatMessage(job.label)}</strong>
+                            <span className={styles.block}>
+                                {job.primaryTask ? intl.formatMessage(job.primaryTask) : ""}
+                            </span>
                         </Typography>,
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
-            <PrintSection title={L.get("Language skills")}>
+            <PrintSection
+                title={intl.formatMessage({defaultMessage: "Language skills", id: "general.languageSkills"})}
+            >
                 {
                     _.entries(props.person.languageSkills).map(([language, skill]) => [
-                        <PrintSectionTitle>{L.get(language as any)}</PrintSectionTitle>,
-                        <Typography>{L.get(skill as any)}</Typography>,
+                        <PrintSectionTitle>
+                            {intl.formatMessage({defaultMessage: language, id: language})}
+                        </PrintSectionTitle>,
+                        <Typography>
+                            {intl.formatMessage({defaultMessage: skill as string, id: skill as string})}
+                        </Typography>,
                     ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
-            <PrintSection title={L.get("Other skills")} small>
+            <PrintSection
+                title={intl.formatMessage({defaultMessage: "Other skills", id: "general.otherSkills"})}
+                small
+            >
                 {
                     props.skills
                         .sort((a, b) => (a.knowledge < b.knowledge ? 1 : -1))
                         .map((skill) => [
-                            <PrintSectionTitle>{skill.label}</PrintSectionTitle>,
+                            <PrintSectionTitle>{intl.formatMessage(skill.label)}</PrintSectionTitle>,
                             <Typography>{getSkillKnowledgeLabel(skill.knowledge)}</Typography>,
                         ]) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
-            <PrintSection title={L.get("Other knowledges")}>
-                {props.person.other.map((other) => [<Typography>{other}</Typography>]) as [React.ReactNode][]}
+            <PrintSection
+                title={intl.formatMessage({defaultMessage: "Other knowledge", id: "general.otherKnowledge"})}
+            >
+                {
+                    props.person.other.map((other) => [
+                        <Typography>{intl.formatMessage(other)}</Typography>,
+                    ]) as [React.ReactNode][]
+                }
             </PrintSection>
         </Box>
     );

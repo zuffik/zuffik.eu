@@ -7,15 +7,19 @@ import {BrowserRouter} from "react-router-dom";
 import {DatabaseProvider} from "./components/context/DatabaseContext";
 import {database} from "./modules/database/Database";
 import {LanguageRouterLayout} from "./components/layout/LanguageRouterLayout";
+import {IntlProvider} from "react-intl";
+import {currentLanguage} from "./modules/i18n/Language";
 
 const App = (props: {}) => (
     <MuiThemeProvider theme={theme}>
-        <BrowserRouter>
-            <CssBaseline />
-            <DatabaseProvider value={database}>
-                <LanguageRouterLayout />
-            </DatabaseProvider>
-        </BrowserRouter>
+        <IntlProvider locale={currentLanguage}>
+            <BrowserRouter>
+                <CssBaseline />
+                <DatabaseProvider value={database}>
+                    <LanguageRouterLayout />
+                </DatabaseProvider>
+            </BrowserRouter>
+        </IntlProvider>
     </MuiThemeProvider>
 );
 

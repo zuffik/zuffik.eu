@@ -1,0 +1,914 @@
+{
+  "db.companies.digitoo.description": [
+    {
+      "type": 0,
+      "value": "Part time job as a frontend developer."
+    }
+  ],
+  "db.companies.digitoo.label": [
+    {
+      "type": 0,
+      "value": "Digitoo"
+    }
+  ],
+  "db.companies.digitoo.primaryTask": [
+    {
+      "type": 0,
+      "value": "Digitoo is startup platform for accountants ."
+    }
+  ],
+  "db.companies.eliasItSolutions.description": [
+    {
+      "type": 0,
+      "value": "So much opportunities to do various jobs. I've learnt most of the things here."
+    }
+  ],
+  "db.companies.eliasItSolutions.label": [
+    {
+      "type": 0,
+      "value": "Eliáš IT Solutions"
+    }
+  ],
+  "db.companies.eliasItSolutions.primaryTask": [
+    {
+      "type": 0,
+      "value": "Multiple projects for many clients (react.js, node.js, php, ...)"
+    }
+  ],
+  "db.companies.freelancer.description": [
+    {
+      "type": 0,
+      "value": "As a freelancer I participated in various project with various languages and platforms. It was all on the beginning of my career."
+    }
+  ],
+  "db.companies.freelancer.label": [
+    {
+      "type": 0,
+      "value": "Freelancer"
+    }
+  ],
+  "db.companies.freelancer.primaryTask": [
+    {
+      "type": 0,
+      "value": "Full-stack web developer (mainly with PHP, react, ...)"
+    }
+  ],
+  "db.companies.mgm.description": [
+    {
+      "type": 0,
+      "value": "Living is important part for every one of us. It is even better when your home is bought online. CRM is one of the tool which can make it possible."
+    }
+  ],
+  "db.companies.mgm.label": [
+    {
+      "type": 0,
+      "value": "Reality MGM"
+    }
+  ],
+  "db.companies.mgm.primaryTask": [
+    {
+      "type": 0,
+      "value": "Full-stack web developer (PHP, jquery, javascript, ...)"
+    }
+  ],
+  "db.companies.pokec.description": [
+    {
+      "type": 0,
+      "value": "Pokec is the first division of the largest Slovak company Azet.sk. It is a dating web which almost every Slovak citizen is aware of."
+    }
+  ],
+  "db.companies.pokec.label": [
+    {
+      "type": 0,
+      "value": "Pokec"
+    }
+  ],
+  "db.companies.pokec.primaryTask": [
+    {
+      "type": 0,
+      "value": "PHP web developer"
+    }
+  ],
+  "db.companies.sprinx.description": [
+    {
+      "type": 0,
+      "value": "Steady, full time job as senior frontend developer."
+    }
+  ],
+  "db.companies.sprinx.label": [
+    {
+      "type": 0,
+      "value": "Sprinx Systems"
+    }
+  ],
+  "db.companies.sprinx.primaryTask": [
+    {
+      "type": 0,
+      "value": "My task is to develop BenefitPlus application with its subprojects (React development)."
+    }
+  ],
+  "db.me.bio": [
+    {
+      "type": 0,
+      "value": "I was student of FRI in University of Žilina, Slovakia. I've been programming since 2010 and participated in various project with various platforms."
+    }
+  ],
+  "db.me.highlights": [
+    {
+      "type": 0,
+      "value": "programmer, react (and full-stack) developer"
+    }
+  ],
+  "db.me.otherSkills.algorithms": [
+    {
+      "type": 0,
+      "value": "Algorithms"
+    }
+  ],
+  "db.me.otherSkills.dataStructures": [
+    {
+      "type": 0,
+      "value": "Data structures"
+    }
+  ],
+  "db.me.otherSkills.driverLicence": [
+    {
+      "type": 0,
+      "value": "A, B driver licence (200 000km driven)"
+    }
+  ],
+  "db.me.otherSkills.mathOptimization": [
+    {
+      "type": 0,
+      "value": "Math optimization"
+    }
+  ],
+  "db.me.otherSkills.simulations": [
+    {
+      "type": 0,
+      "value": "Simulations"
+    }
+  ],
+  "db.projects.albumovo.description": [
+    {
+      "type": 0,
+      "value": "One of the first e-shops made with my own CMS based on PHP. I was learning the language (and bit of seo) within this project."
+    }
+  ],
+  "db.projects.albumovo.label": [
+    {
+      "type": 0,
+      "value": "Albumovo.sk"
+    }
+  ],
+  "db.projects.benefitPlus.description": [
+    {
+      "type": 0,
+      "value": "Project based on react.js. There is still so much to learn and this project took me higher."
+    }
+  ],
+  "db.projects.benefitPlus.label": [
+    {
+      "type": 0,
+      "value": "BenefitPlus"
+    }
+  ],
+  "db.projects.cucumberGenerator.description": [
+    {
+      "type": 0,
+      "value": "Generate step definitions for cucumber scenarios."
+    }
+  ],
+  "db.projects.cucumberGenerator.label": [
+    {
+      "type": 0,
+      "value": "cucumber-generator"
+    }
+  ],
+  "db.projects.digitoo.description": [
+    {
+      "type": 0,
+      "value": "Digitoo application for digital accounting"
+    }
+  ],
+  "db.projects.digitoo.label": [
+    {
+      "type": 0,
+      "value": "Digitoo app"
+    }
+  ],
+  "db.projects.emu.description": [
+    {
+      "type": 0,
+      "value": "React.js first project I have ever done with professionality. There were many concepts I have understood."
+    }
+  ],
+  "db.projects.emu.label": [
+    {
+      "type": 0,
+      "value": "EMU"
+    }
+  ],
+  "db.projects.eset.description": [
+    {
+      "type": 0,
+      "value": "Cart handling and licence renewal for eset antivirus"
+    }
+  ],
+  "db.projects.eset.label": [
+    {
+      "type": 0,
+      "value": "ESET"
+    }
+  ],
+  "db.projects.estateVoke.description": [
+    {
+      "type": 0,
+      "value": "Indirect communication with client and entire process of buying estates is captured in this application."
+    }
+  ],
+  "db.projects.estateVoke.label": [
+    {
+      "type": 0,
+      "value": "ESTATeVOKE"
+    }
+  ],
+  "db.projects.fitradio.description": [
+    {
+      "type": 0,
+      "value": "React Native app for streaming real time sound and in-app songs."
+    }
+  ],
+  "db.projects.fitradio.label": [
+    {
+      "type": 0,
+      "value": "Fitradio"
+    }
+  ],
+  "db.projects.mailtrapClient.description": [
+    {
+      "type": 0,
+      "value": "Mailtrap.io api client with some added features."
+    }
+  ],
+  "db.projects.mailtrapClient.label": [
+    {
+      "type": 0,
+      "value": "mailtrap-client"
+    }
+  ],
+  "db.projects.odfarmara.description": [
+    {
+      "type": 0,
+      "value": "Are you living healthy? You can order material for baking, cooking and eating food from actual farmers from web or your phone."
+    }
+  ],
+  "db.projects.odfarmara.label": [
+    {
+      "type": 0,
+      "value": "OdFarmara.sk"
+    }
+  ],
+  "db.projects.penziontimea.description": [
+    {
+      "type": 0,
+      "value": "Skiing or hiking. This web page is prepared for you to order right vacation in beautiful village Zuberec in Roháče."
+    }
+  ],
+  "db.projects.penziontimea.label": [
+    {
+      "type": 0,
+      "value": "Penzión Timea"
+    }
+  ],
+  "db.projects.svadobnedekoracie.description": [
+    {
+      "type": 0,
+      "value": "If you are starting a family with a great celebration (marriage) you'll certainly need some stuff to make it possible."
+    }
+  ],
+  "db.projects.svadobnedekoracie.label": [
+    {
+      "type": 0,
+      "value": "Svadobné dekorácie"
+    }
+  ],
+  "db.school.friBc.label": [
+    {
+      "type": 0,
+      "value": "University of Žilina - Bc."
+    }
+  ],
+  "db.school.friBc.level": [
+    {
+      "type": 0,
+      "value": "Bachelor"
+    }
+  ],
+  "db.school.friBc.section": [
+    {
+      "type": 0,
+      "value": "Faculty of management and information technology"
+    }
+  ],
+  "db.school.friIng.label": [
+    {
+      "type": 0,
+      "value": "University of Žilina - Ing."
+    }
+  ],
+  "db.school.friIng.level": [
+    {
+      "type": 0,
+      "value": "Master"
+    }
+  ],
+  "db.school.friIng.section": [
+    {
+      "type": 0,
+      "value": "Faculty of management and information technology"
+    }
+  ],
+  "db.school.sstv.label": [
+    {
+      "type": 0,
+      "value": "United school Tvrdošín"
+    }
+  ],
+  "db.school.sstv.level": [
+    {
+      "type": 0,
+      "value": "High school"
+    }
+  ],
+  "db.school.sstv.section": [
+    {
+      "type": 0,
+      "value": "Technical academy"
+    }
+  ],
+  "db.skills.frameworks.angular.description": [
+    {
+      "type": 0,
+      "value": "basics"
+    }
+  ],
+  "db.skills.frameworks.angular.label": [
+    {
+      "type": 0,
+      "value": "Angular"
+    }
+  ],
+  "db.skills.frameworks.bootstrap.description": [
+    {
+      "type": 0,
+      "value": "design"
+    }
+  ],
+  "db.skills.frameworks.bootstrap.label": [
+    {
+      "type": 0,
+      "value": "Bootstrap"
+    }
+  ],
+  "db.skills.frameworks.cypress.description": [
+    {
+      "type": 0,
+      "value": "better selenium"
+    }
+  ],
+  "db.skills.frameworks.cypress.label": [
+    {
+      "type": 0,
+      "value": "Cypress"
+    }
+  ],
+  "db.skills.frameworks.dotnetCore.description": [
+    {
+      "type": 0,
+      "value": "Microsoft pfff..."
+    }
+  ],
+  "db.skills.frameworks.dotnetCore.label": [
+    {
+      "type": 0,
+      "value": "Dotnet Core"
+    }
+  ],
+  "db.skills.frameworks.graphql.description": [
+    {
+      "type": 0,
+      "value": "I ♥ it"
+    }
+  ],
+  "db.skills.frameworks.graphql.label": [
+    {
+      "type": 0,
+      "value": "GraphQL"
+    }
+  ],
+  "db.skills.frameworks.ionic.description": [
+    {
+      "type": 0,
+      "value": "mobile angular"
+    }
+  ],
+  "db.skills.frameworks.ionic.label": [
+    {
+      "type": 0,
+      "value": "Ionic"
+    }
+  ],
+  "db.skills.frameworks.jest.description": [
+    {
+      "type": 0,
+      "value": "testing"
+    }
+  ],
+  "db.skills.frameworks.jest.label": [
+    {
+      "type": 0,
+      "value": "Jest"
+    }
+  ],
+  "db.skills.frameworks.laravel.description": [
+    {
+      "type": 0,
+      "value": "best for PHP"
+    }
+  ],
+  "db.skills.frameworks.laravel.label": [
+    {
+      "type": 0,
+      "value": "Laravel"
+    }
+  ],
+  "db.skills.frameworks.materialUi.description": [
+    {
+      "type": 0,
+      "value": "great FE"
+    }
+  ],
+  "db.skills.frameworks.materialUi.label": [
+    {
+      "type": 0,
+      "value": "Material UI"
+    }
+  ],
+  "db.skills.frameworks.nestjs.description": [
+    {
+      "type": 0,
+      "value": "I ♥ it"
+    }
+  ],
+  "db.skills.frameworks.nestjs.label": [
+    {
+      "type": 0,
+      "value": "nest.js"
+    }
+  ],
+  "db.skills.frameworks.nodejs.description": [
+    {
+      "type": 0,
+      "value": "multifunctional"
+    }
+  ],
+  "db.skills.frameworks.nodejs.label": [
+    {
+      "type": 0,
+      "value": "Node.js"
+    }
+  ],
+  "db.skills.frameworks.react.description": [
+    {
+      "type": 0,
+      "value": "I ♥ it"
+    }
+  ],
+  "db.skills.frameworks.react.label": [
+    {
+      "type": 0,
+      "value": "React"
+    }
+  ],
+  "db.skills.frameworks.reactNative.description": [
+    {
+      "type": 0,
+      "value": "react for mobiles"
+    }
+  ],
+  "db.skills.frameworks.reactNative.label": [
+    {
+      "type": 0,
+      "value": "React Native"
+    }
+  ],
+  "db.skills.frameworks.selenium.description": [
+    {
+      "type": 0,
+      "value": "necessary"
+    }
+  ],
+  "db.skills.frameworks.selenium.label": [
+    {
+      "type": 0,
+      "value": "Selenium"
+    }
+  ],
+  "db.skills.frameworks.unity.description": [
+    {
+      "type": 0,
+      "value": "games"
+    }
+  ],
+  "db.skills.frameworks.unity.label": [
+    {
+      "type": 0,
+      "value": "Unity"
+    }
+  ],
+  "db.skills.frameworks.vuejs.description": [
+    {
+      "type": 0,
+      "value": "interesting..."
+    }
+  ],
+  "db.skills.frameworks.vuejs.label": [
+    {
+      "type": 0,
+      "value": "Vue.js"
+    }
+  ],
+  "db.skills.languages.cpp.description": [
+    {
+      "type": 0,
+      "value": "excellent"
+    }
+  ],
+  "db.skills.languages.cpp.label": [
+    {
+      "type": 0,
+      "value": "C++"
+    }
+  ],
+  "db.skills.languages.csharp.description": [
+    {
+      "type": 0,
+      "value": "better C++"
+    }
+  ],
+  "db.skills.languages.csharp.label": [
+    {
+      "type": 0,
+      "value": "C#"
+    }
+  ],
+  "db.skills.languages.css.description": [
+    {
+      "type": 0,
+      "value": "everyone knows"
+    }
+  ],
+  "db.skills.languages.css.label": [
+    {
+      "type": 0,
+      "value": "CSS"
+    }
+  ],
+  "db.skills.languages.html.description": [
+    {
+      "type": 0,
+      "value": "everyone knows"
+    }
+  ],
+  "db.skills.languages.html.label": [
+    {
+      "type": 0,
+      "value": "HTML"
+    }
+  ],
+  "db.skills.languages.java.description": [
+    {
+      "type": 0,
+      "value": "meh"
+    }
+  ],
+  "db.skills.languages.java.label": [
+    {
+      "type": 0,
+      "value": "Java"
+    }
+  ],
+  "db.skills.languages.javascript.description": [
+    {
+      "type": 0,
+      "value": "perfect"
+    }
+  ],
+  "db.skills.languages.javascript.label": [
+    {
+      "type": 0,
+      "value": "JavaScript"
+    }
+  ],
+  "db.skills.languages.latex.description": [
+    {
+      "type": 0,
+      "value": "math docs"
+    }
+  ],
+  "db.skills.languages.latex.label": [
+    {
+      "type": 0,
+      "value": "LaTeX"
+    }
+  ],
+  "db.skills.languages.markdown.description": [
+    {
+      "type": 0,
+      "value": "all docs"
+    }
+  ],
+  "db.skills.languages.markdown.label": [
+    {
+      "type": 0,
+      "value": "MarkDown"
+    }
+  ],
+  "db.skills.languages.mongodb.description": [
+    {
+      "type": 0,
+      "value": "elegant DB"
+    }
+  ],
+  "db.skills.languages.mongodb.label": [
+    {
+      "type": 0,
+      "value": "MongoDB"
+    }
+  ],
+  "db.skills.languages.php.description": [
+    {
+      "type": 0,
+      "value": "was perfect"
+    }
+  ],
+  "db.skills.languages.php.label": [
+    {
+      "type": 0,
+      "value": "PHP"
+    }
+  ],
+  "db.skills.languages.python.description": [
+    {
+      "type": 0,
+      "value": "fast math"
+    }
+  ],
+  "db.skills.languages.python.label": [
+    {
+      "type": 0,
+      "value": "Python"
+    }
+  ],
+  "db.skills.languages.redis.description": [
+    {
+      "type": 0,
+      "value": "fast db"
+    }
+  ],
+  "db.skills.languages.redis.label": [
+    {
+      "type": 0,
+      "value": "Redis"
+    }
+  ],
+  "db.skills.languages.sql.description": [
+    {
+      "type": 0,
+      "value": "\"(my)SQL\""
+    }
+  ],
+  "db.skills.languages.sql.label": [
+    {
+      "type": 0,
+      "value": "SQL"
+    }
+  ],
+  "db.skills.languages.typescript.description": [
+    {
+      "type": 0,
+      "value": "prevent bugs"
+    }
+  ],
+  "db.skills.languages.typescript.label": [
+    {
+      "type": 0,
+      "value": "TypeScript"
+    }
+  ],
+  "db.skills.platforms.android.description": [
+    {
+      "type": 0,
+      "value": "s-l-o-w"
+    }
+  ],
+  "db.skills.platforms.android.label": [
+    {
+      "type": 0,
+      "value": "Android"
+    }
+  ],
+  "db.skills.platforms.apple.description": [
+    {
+      "type": 0,
+      "value": "my precious"
+    }
+  ],
+  "db.skills.platforms.apple.label": [
+    {
+      "type": 0,
+      "value": "Apple"
+    }
+  ],
+  "db.skills.platforms.arduino.description": [
+    {
+      "type": 0,
+      "value": "can be anywhere"
+    }
+  ],
+  "db.skills.platforms.arduino.label": [
+    {
+      "type": 0,
+      "value": "Arduino"
+    }
+  ],
+  "db.skills.platforms.browser.description": [
+    {
+      "type": 0,
+      "value": "bedrock"
+    }
+  ],
+  "db.skills.platforms.browser.label": [
+    {
+      "type": 0,
+      "value": "Browser"
+    }
+  ],
+  "db.skills.platforms.linux.description": [
+    {
+      "type": 0,
+      "value": "heaven (cloud)"
+    }
+  ],
+  "db.skills.platforms.linux.label": [
+    {
+      "type": 0,
+      "value": "Linux"
+    }
+  ],
+  "db.skills.platforms.raspberry.description": [
+    {
+      "type": 0,
+      "value": "smaller heaven"
+    }
+  ],
+  "db.skills.platforms.raspberry.label": [
+    {
+      "type": 0,
+      "value": "Raspberry"
+    }
+  ],
+  "db.skills.utilities.ann.description": [
+    {
+      "type": 0,
+      "value": "machine learning"
+    }
+  ],
+  "db.skills.utilities.ann.label": [
+    {
+      "type": 0,
+      "value": "ANN"
+    }
+  ],
+  "db.skills.utilities.aws.description": [
+    {
+      "type": 0,
+      "value": "universal heaven"
+    }
+  ],
+  "db.skills.utilities.aws.label": [
+    {
+      "type": 0,
+      "value": "aws"
+    }
+  ],
+  "db.skills.utilities.bitbucket.description": [
+    {
+      "type": 0,
+      "value": "alt CI"
+    }
+  ],
+  "db.skills.utilities.bitbucket.label": [
+    {
+      "type": 0,
+      "value": "BitBucket CI"
+    }
+  ],
+  "db.skills.utilities.cucumber.description": [
+    {
+      "type": 0,
+      "value": "dummy testing"
+    }
+  ],
+  "db.skills.utilities.cucumber.label": [
+    {
+      "type": 0,
+      "value": "Cucumber"
+    }
+  ],
+  "db.skills.utilities.docker.description": [
+    {
+      "type": 0,
+      "value": "isolation"
+    }
+  ],
+  "db.skills.utilities.docker.label": [
+    {
+      "type": 0,
+      "value": "Docker"
+    }
+  ],
+  "db.skills.utilities.dockerCompose.description": [
+    {
+      "type": 0,
+      "value": "composer"
+    }
+  ],
+  "db.skills.utilities.dockerCompose.label": [
+    {
+      "type": 0,
+      "value": "Docker compose"
+    }
+  ],
+  "db.skills.utilities.git.description": [
+    {
+      "type": 0,
+      "value": "conflict!"
+    }
+  ],
+  "db.skills.utilities.git.label": [
+    {
+      "type": 0,
+      "value": "git"
+    }
+  ],
+  "db.skills.utilities.gitlab.description": [
+    {
+      "type": 0,
+      "value": "best CI"
+    }
+  ],
+  "db.skills.utilities.gitlab.label": [
+    {
+      "type": 0,
+      "value": "GitLab-CI"
+    }
+  ],
+  "db.skills.utilities.jenkins.description": [
+    {
+      "type": 0,
+      "value": "custom CI"
+    }
+  ],
+  "db.skills.utilities.jenkins.label": [
+    {
+      "type": 0,
+      "value": "Jenkins"
+    }
+  ],
+  "db.skills.utilities.travisCi.description": [
+    {
+      "type": 0,
+      "value": "Travis CI"
+    }
+  ],
+  "db.skills.utilities.travisCi.label": [
+    {
+      "type": 0,
+      "value": "Travis CI"
+    }
+  ],
+  "db.skills.utilities.webpack.description": [
+    {
+      "type": 0,
+      "value": "all together"
+    }
+  ],
+  "db.skills.utilities.webpack.label": [
+    {
+      "type": 0,
+      "value": "Webpack"
+    }
+  ]
+}

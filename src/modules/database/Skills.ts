@@ -6,7 +6,7 @@ import {Platform} from "../../types/skills/Platform";
 import {Utility} from "../../types/skills/Utility";
 import {jobs} from "./Jobs";
 import {createImg} from "../../components/elements/Img";
-import {L} from "../i18n/Locale";
+import {defineMessage} from "react-intl";
 
 import imgAngular from "../../static/skills/frameworks/angular.svg";
 import imgDotnetCore from "../../static/skills/frameworks/dotnet-core.svg";
@@ -52,164 +52,189 @@ import imgCucumber from "../../static/skills/utilities/cucumber.svg";
 import imgJenkins from "../../static/skills/utilities/jenkins.svg";
 import imgTravisCi from "../../static/skills/utilities/travis-ci.svg";
 import imgWebpack from "../../static/skills/utilities/webpack.svg";
+import imgDocker from "../../static/skills/utilities/docker.svg";
+import imgDockerCompose from "../../static/skills/utilities/docker-compose.png";
 //import imgPwa from "../../static/skills/utilities/pwa.svg";
 
 export const skills = {
     frameworks: {
         angular: new Framework(
             "angular",
-            "Angular",
+            defineMessage({id: "db.skills.frameworks.angular.label", defaultMessage: "Angular"}),
             createImg(imgAngular),
             "https://angular.io/",
             [jobs.companies.freelancer],
             [jobs.projects.odfarmara],
             20,
-            L.get("basics")
+            defineMessage({
+                id: "db.skills.frameworks.angular.description",
+                defaultMessage: "basics",
+            })
         ),
         dotnetCore: new Framework(
             "dotnetCore",
-            "Dotnet Core",
+            defineMessage({id: "db.skills.frameworks.dotnetCore.label", defaultMessage: "Dotnet Core"}),
             createImg(imgDotnetCore),
             "https://dotnet.microsoft.com/download",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             20,
-            L.get("Microsoft pfff...")
+            defineMessage({
+                id: "db.skills.frameworks.dotnetCore.description",
+                defaultMessage: "Microsoft pfff...",
+            })
         ),
         ionic: new Framework(
             "ionic",
-            "Ionic",
+            defineMessage({id: "db.skills.frameworks.ionic.label", defaultMessage: "Ionic"}),
             createImg(imgIonic),
             "https://ionicframework.com/",
             [jobs.companies.freelancer],
             [jobs.projects.odfarmara],
             20,
-            L.get("mobile angular")
+            defineMessage({
+                id: "db.skills.frameworks.ionic.description",
+                defaultMessage: "mobile angular",
+            })
         ),
         laravel: new Framework(
             "laravel",
-            "Laravel",
+            defineMessage({id: "db.skills.frameworks.laravel.label", defaultMessage: "Laravel"}),
             createImg(imgLaravel),
             "https://laravel.com",
             [jobs.companies.eliasItSolutions],
             [],
             60,
-            L.get("best for PHP")
+            defineMessage({
+                id: "db.skills.frameworks.laravel.description",
+                defaultMessage: "best for PHP",
+            })
         ),
         graphql: new Framework(
             "graphql",
-            "GraphQL",
+            defineMessage({id: "db.skills.frameworks.graphql.label", defaultMessage: "GraphQL"}),
             createImg(imgGraphql),
             "https://graphql.org",
-            [jobs.companies.eliasItSolutions, jobs.schools.friBc, jobs.schools.friIng],
-            [],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.schools.friBc,
+                jobs.schools.friIng,
+                jobs.companies.digitoo,
+            ],
+            [jobs.projects.digitoo],
             60,
-            L.get("I ♥ it")
+            defineMessage({
+                id: "db.skills.frameworks.graphql.description",
+                defaultMessage: "I ♥ it",
+            })
         ),
         nestjs: new Framework(
             "nestjs",
-            "nest.js",
+            defineMessage({id: "db.skills.frameworks.nestjs.label", defaultMessage: "nest.js"}),
             createImg(imgNestjs),
             "https://nestjs.com",
-            [jobs.companies.freelancer],
-            [],
+            [jobs.companies.freelancer, jobs.companies.digitoo],
+            [jobs.projects.digitoo],
             40,
-            L.get("I ♥ it")
+            defineMessage({
+                id: "db.skills.frameworks.nestjs.description",
+                defaultMessage: "I ♥ it",
+            })
         ),
         nodejs: new Framework(
             "nodejs",
-            "Node.js",
+            defineMessage({id: "db.skills.frameworks.nodejs.label", defaultMessage: "Node.js"}),
             createImg(imgNodejs),
             "https://nodejs.org",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
+            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
             [
                 jobs.projects.benefitPlus,
                 jobs.projects.emu,
                 jobs.projects.mailtrapClient,
                 jobs.projects.cucumberGenerator,
+                jobs.projects.digitoo,
             ],
             80,
-            L.get("multifunctional")
+            defineMessage({
+                id: "db.skills.frameworks.nodejs.description",
+                defaultMessage: "multifunctional",
+            })
         ),
         react: new Framework(
             "react",
-            "React",
+            defineMessage({id: "db.skills.frameworks.react.label", defaultMessage: "React"}),
             createImg(imgReact),
             "https://react.com",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
-            [jobs.projects.benefitPlus, jobs.projects.emu, jobs.projects.fitradio],
-            90,
-            L.get("I ♥ it")
-        ),
-        reactNative: new Framework(
-            "reactNative",
-            "React Native",
-            createImg(imgReact),
-            "https://facebook.github.io/react-native/",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
-            [jobs.projects.benefitPlus, jobs.projects.fitradio],
-            85,
-            L.get("react for mobiles")
-        ),
-        typescript: new Framework(
-            "typescript",
-            "TypeScript",
-            createImg(imgTypescript),
-            "https://typescriptlang.org",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
+            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
             [
                 jobs.projects.benefitPlus,
                 jobs.projects.emu,
                 jobs.projects.fitradio,
-                jobs.projects.cucumberGenerator,
-                jobs.projects.mailtrapClient,
+                jobs.projects.digitoo,
+                jobs.projects.benefitPlus,
+                jobs.projects.eset,
             ],
-            99,
-            L.get("prevent bugs")
+            90,
+            defineMessage({
+                id: "db.skills.frameworks.react.description",
+                defaultMessage: "I ♥ it",
+            })
         ),
-        javascript: new Language(
-            "javascript",
-            "JavaScript",
-            createImg(imgJavascript),
-            "https://javascript.com",
-            [..._.values(jobs.companies), ..._.values(jobs.schools)],
-            _.values(jobs.projects),
-            99,
-            L.get("perfect")
+        reactNative: new Framework(
+            "reactNative",
+            defineMessage({id: "db.skills.frameworks.reactNative.label", defaultMessage: "React Native"}),
+            createImg(imgReact),
+            "https://facebook.github.io/react-native/",
+            [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
+            [jobs.projects.benefitPlus, jobs.projects.fitradio, jobs.projects.benefitPlus],
+            85,
+            defineMessage({
+                id: "db.skills.frameworks.reactNative.description",
+                defaultMessage: "react for mobiles",
+            })
         ),
         vuejs: new Framework(
             "vuejs",
-            "Vue.js",
+            defineMessage({id: "db.skills.frameworks.vuejs.label", defaultMessage: "Vue.js"}),
             createImg(imgVuejs),
             "https://vuejs.org",
             [jobs.companies.eliasItSolutions],
             [],
             20,
-            L.get("interesting...")
+            defineMessage({
+                id: "db.skills.frameworks.vuejs.description",
+                defaultMessage: "interesting...",
+            })
         ),
         cypress: new Framework(
             "cypress",
-            "Cypress",
+            defineMessage({id: "db.skills.frameworks.cypress.label", defaultMessage: "Cypress"}),
             createImg(imgCypress),
             "https://cypress.io",
-            [],
-            [],
+            [jobs.companies.digitoo],
+            [jobs.projects.digitoo],
             48,
-            L.get("better selenium")
+            defineMessage({
+                id: "db.skills.frameworks.cypress.description",
+                defaultMessage: "better selenium",
+            })
         ),
         selenium: new Framework(
             "selenium",
-            "Selenium",
+            defineMessage({id: "db.skills.frameworks.selenium.label", defaultMessage: "Selenium"}),
             createImg(imgSelenium),
             "https://selenium.dev",
             [],
             [],
             5,
-            L.get("necessary")
+            defineMessage({
+                id: "db.skills.frameworks.selenium.description",
+                defaultMessage: "necessary",
+            })
         ),
         bootstrap: new Framework(
             "bootstrap",
-            "Bootstrap",
+            defineMessage({id: "db.skills.frameworks.bootstrap.label", defaultMessage: "Bootstrap"}),
             createImg(imgBootstrap),
             "https://getbootstrap.com",
             [jobs.schools.sstv, jobs.companies.freelancer, jobs.companies.mgm],
@@ -220,83 +245,151 @@ export const skills = {
                 jobs.projects.albumovo,
             ],
             20,
-            L.get("design")
+            defineMessage({
+                id: "db.skills.frameworks.bootstrap.description",
+                defaultMessage: "design",
+            })
         ),
         jest: new Framework(
             "jest",
-            "Jest",
+            defineMessage({id: "db.skills.frameworks.jest.label", defaultMessage: "Jest"}),
             createImg(imgJest),
             "https://jestjs.io",
-            [jobs.companies.eliasItSolutions, jobs.companies.freelancer, jobs.companies.sprinx],
-            [jobs.projects.benefitPlus, jobs.projects.emu],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.companies.freelancer,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+            ],
+            [jobs.projects.benefitPlus, jobs.projects.emu, jobs.projects.digitoo],
             83,
-            L.get("testing")
+            defineMessage({
+                id: "db.skills.frameworks.jest.description",
+                defaultMessage: "testing",
+            })
         ),
         materialUi: new Framework(
             "materialUi",
-            "Material UI",
+            defineMessage({id: "db.skills.frameworks.materialUi.label", defaultMessage: "Material UI"}),
             createImg(imgMaterialUi),
             "http://material-ui.com",
-            [jobs.companies.eliasItSolutions, jobs.companies.freelancer, jobs.companies.sprinx],
-            [jobs.projects.benefitPlus],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.companies.freelancer,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+            ],
+            [jobs.projects.benefitPlus, jobs.projects.digitoo],
             76,
-            L.get("great FE")
+            defineMessage({
+                id: "db.skills.frameworks.materialUi.description",
+                defaultMessage: "great FE",
+            })
         ),
         unity: new Framework(
             "unity",
-            "Unity",
+            defineMessage({id: "db.skills.frameworks.unity.label", defaultMessage: "Unity"}),
             createImg(imgUnity),
             "https://unity.com",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             36,
-            L.get("games")
+            defineMessage({
+                id: "db.skills.frameworks.unity.description",
+                defaultMessage: "games",
+            })
         ),
     },
     languages: {
+        typescript: new Language(
+            "typescript",
+            defineMessage({id: "db.skills.languages.typescript.label", defaultMessage: "TypeScript"}),
+            createImg(imgTypescript),
+            "https://typescriptlang.org",
+            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
+            [
+                jobs.projects.benefitPlus,
+                jobs.projects.emu,
+                jobs.projects.fitradio,
+                jobs.projects.cucumberGenerator,
+                jobs.projects.mailtrapClient,
+                jobs.projects.digitoo,
+                jobs.projects.eset,
+            ],
+            99,
+            defineMessage({
+                id: "db.skills.languages.typescript.description",
+                defaultMessage: "prevent bugs",
+            })
+        ),
+        javascript: new Language(
+            "javascript",
+            defineMessage({id: "db.skills.languages.javascript.label", defaultMessage: "JavaScript"}),
+            createImg(imgJavascript),
+            "https://javascript.com",
+            [..._.values(jobs.companies), ..._.values(jobs.schools)],
+            _.values(jobs.projects),
+            99,
+            defineMessage({
+                id: "db.skills.languages.javascript.description",
+                defaultMessage: "perfect",
+            })
+        ),
         cpp: new Language(
             "cpp",
-            "C++",
+            defineMessage({id: "db.skills.languages.cpp.label", defaultMessage: "C++"}),
             createImg(imgCpp),
             "http://www.cplusplus.com/",
             [..._.values(jobs.schools)],
             [],
             10,
-            L.get("excellent")
+            defineMessage({
+                id: "db.skills.languages.cpp.description",
+                defaultMessage: "excellent",
+            })
         ),
         csharp: new Language(
             "csharp",
-            "C#",
+            defineMessage({id: "db.skills.languages.csharp.label", defaultMessage: "C#"}),
             createImg(imgCsharp),
             "https://docs.microsoft.com/en-us/dotnet/csharp/",
             [..._.values(jobs.schools)],
             [],
             11,
-            L.get("better C++")
+            defineMessage({
+                id: "db.skills.languages.csharp.description",
+                defaultMessage: "better C++",
+            })
         ),
         latex: new Language(
             "latex",
-            "LaTeX",
+            defineMessage({id: "db.skills.languages.latex.label", defaultMessage: "LaTeX"}),
             createImg(imgLatex),
             "http://latex.org",
             [jobs.schools.friIng],
             [],
             23,
-            L.get("math docs")
+            defineMessage({
+                id: "db.skills.languages.latex.description",
+                defaultMessage: "math docs",
+            })
         ),
         mongodb: new Language(
             "mongodb",
-            "MongoDB",
+            defineMessage({id: "db.skills.languages.mongodb.label", defaultMessage: "MongoDB"}),
             createImg(imgMongodb),
             "https://www.mongodb.com",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             34,
-            L.get("elegant DB")
+            defineMessage({
+                id: "db.skills.languages.mongodb.description",
+                defaultMessage: "elegant DB",
+            })
         ),
         sql: new Language(
             "sql",
-            "SQL",
+            defineMessage({id: "db.skills.languages.sql.label", defaultMessage: "SQL"}),
             createImg(imgSql),
             "https://www.mysql.com",
             [
@@ -314,31 +407,40 @@ export const skills = {
                 jobs.projects.svadobnedekoracie,
             ],
             89,
-            "(my)SQL"
+            defineMessage({
+                id: "db.skills.languages.sql.description",
+                defaultMessage: '"(my)SQL"',
+            })
         ),
         python: new Language(
             "python",
-            "Python",
+            defineMessage({id: "db.skills.languages.python.label", defaultMessage: "Python"}),
             createImg(imgPython),
             "https://www.python.org",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             56,
-            L.get("fast math")
+            defineMessage({
+                id: "db.skills.languages.python.description",
+                defaultMessage: "fast math",
+            })
         ),
         redis: new Language(
             "redis",
-            "Redis",
+            defineMessage({id: "db.skills.languages.redis.label", defaultMessage: "Redis"}),
             createImg(imgRedis),
             "https://redis.io",
             [..._.values(jobs.schools)],
             [],
             64,
-            L.get("fast db")
+            defineMessage({
+                id: "db.skills.languages.redis.description",
+                defaultMessage: "fast db",
+            })
         ),
         css: new Language(
             "css",
-            "CSS",
+            defineMessage({id: "db.skills.languages.css.label", defaultMessage: "CSS"}),
             createImg(imgCss),
             "https://css-tricks.com/",
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
@@ -346,11 +448,14 @@ export const skills = {
                 (p) => !["fitradio", "cucumberGenerator", "mailtrapClient"].includes(p.id)
             ),
             99,
-            L.get("everyone knows")
+            defineMessage({
+                id: "db.skills.languages.css.description",
+                defaultMessage: "everyone knows",
+            })
         ),
         html: new Language(
             "html",
-            "HTML",
+            defineMessage({id: "db.skills.languages.html.label", defaultMessage: "HTML"}),
             createImg(imgHtml),
             "https://www.w3schools.com/html/",
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
@@ -358,21 +463,27 @@ export const skills = {
                 (p) => !["fitradio", "cucumberGenerator", "mailtrapClient"].includes(p.id)
             ),
             99,
-            L.get("everyone knows")
+            defineMessage({
+                id: "db.skills.languages.html.description",
+                defaultMessage: "everyone knows",
+            })
         ),
         java: new Language(
             "java",
-            "Java",
+            defineMessage({id: "db.skills.languages.java.label", defaultMessage: "Java"}),
             createImg(imgJava),
             "https://java.com",
             [jobs.schools.friBc, jobs.schools.friIng],
             [],
             35,
-            L.get("meh")
+            defineMessage({
+                id: "db.skills.languages.java.description",
+                defaultMessage: "meh",
+            })
         ),
         php: new Language(
             "php",
-            "PHP",
+            defineMessage({id: "db.skills.languages.php.label", defaultMessage: "PHP"}),
             createImg(imgPhp),
             "https://php.net",
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
@@ -384,105 +495,135 @@ export const skills = {
                 jobs.projects.svadobnedekoracie,
             ],
             99,
-            L.get("was perfect")
+            defineMessage({
+                id: "db.skills.languages.php.description",
+                defaultMessage: "was perfect",
+            })
         ),
         markdown: new Language(
             "markdown",
-            "MarkDown",
+            defineMessage({id: "db.skills.languages.markdown.label", defaultMessage: "MarkDown"}),
             createImg(imgMarkdown),
             "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
             [..._.values(jobs.schools), ..._.values(jobs.companies)],
             [..._.values(jobs.projects)],
             76,
-            L.get("all docs")
+            defineMessage({
+                id: "db.skills.languages.markdown.description",
+                defaultMessage: "all docs",
+            })
         ),
     },
     platforms: {
         android: new Platform(
             "android",
-            "Android",
+            defineMessage({id: "db.skills.platforms.android.label", defaultMessage: "Android"}),
             createImg(imgAndroid),
             "https://android.com",
             [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
             [jobs.projects.benefitPlus, jobs.projects.fitradio],
             40,
-            L.get("s-l-o-w")
+            defineMessage({
+                id: "db.skills.platforms.android.description",
+                defaultMessage: "s-l-o-w",
+            })
         ),
         apple: new Platform(
             "apple",
-            "Apple",
+            defineMessage({id: "db.skills.platforms.apple.label", defaultMessage: "Apple"}),
             createImg(imgApple),
             "https://apple.com",
             [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
             [jobs.projects.benefitPlus, jobs.projects.fitradio],
             30,
-            L.get("my precious")
+            defineMessage({
+                id: "db.skills.platforms.apple.description",
+                defaultMessage: "my precious",
+            })
         ),
         arduino: new Platform(
             "arduino",
-            "Arduino",
+            defineMessage({id: "db.skills.platforms.arduino.label", defaultMessage: "Arduino"}),
             createImg(imgArduino),
             "https://arduino.cc",
             [jobs.companies.freelancer],
             [],
             30,
-            L.get("can be anywhere")
+            defineMessage({
+                id: "db.skills.platforms.arduino.description",
+                defaultMessage: "can be anywhere",
+            })
         ),
         browser: new Platform(
             "browser",
-            "Browser",
+            defineMessage({id: "db.skills.platforms.browser.label", defaultMessage: "Browser"}),
             createImg(imgBrowser),
             "https://www.browserstack.com/",
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects).filter((p) => !["fitradio", "cucumberGenerator"].includes(p.id)),
             99,
-            L.get("bedrock")
+            defineMessage({
+                id: "db.skills.platforms.browser.description",
+                defaultMessage: "bedrock",
+            })
         ),
         linux: new Platform(
             "linux",
-            "Linux",
+            defineMessage({id: "db.skills.platforms.linux.label", defaultMessage: "Linux"}),
             createImg(imgLinux),
             "https://linux.org",
             [jobs.companies.freelancer, jobs.companies.mgm, jobs.companies.eliasItSolutions],
             [jobs.projects.estateVoke, jobs.projects.odfarmara],
             80,
-            L.get("heaven (cloud)")
+            defineMessage({
+                id: "db.skills.platforms.linux.description",
+                defaultMessage: "heaven (cloud)",
+            })
         ),
         raspberry: new Platform(
             "raspberry",
-            "Raspberry",
+            defineMessage({id: "db.skills.platforms.raspberry.label", defaultMessage: "Raspberry"}),
             createImg(imgRaspberry),
             "https://raspberrypi.org",
             [jobs.companies.freelancer],
             [],
             80,
-            L.get("smaller heaven")
+            defineMessage({
+                id: "db.skills.platforms.raspberry.description",
+                defaultMessage: "smaller heaven",
+            })
         ),
     },
     utilities: {
         aws: new Utility(
             "aws",
-            "aws",
+            defineMessage({id: "db.skills.utilities.aws.label", defaultMessage: "aws"}),
             createImg(imgAws),
             "https://aws.amazon.com",
             [jobs.companies.eliasItSolutions, jobs.companies.freelancer],
             [],
             10,
-            L.get("universal heaven")
+            defineMessage({
+                id: "db.skills.utilities.aws.description",
+                defaultMessage: "universal heaven",
+            })
         ),
         git: new Utility(
             "git",
-            "git",
+            defineMessage({id: "db.skills.utilities.git.label", defaultMessage: "git"}),
             createImg(imgGit),
             "https://git-scm.com",
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects),
             90,
-            L.get("conflict!")
+            defineMessage({
+                id: "db.skills.utilities.git.description",
+                defaultMessage: "conflict!",
+            })
         ),
         gitlab: new Utility(
             "gitlab",
-            "GitLab-CI",
+            defineMessage({id: "db.skills.utilities.gitlab.label", defaultMessage: "GitLab-CI"}),
             createImg(imgGitlab),
             "https://gitlab.com",
             [
@@ -491,80 +632,118 @@ export const skills = {
                 jobs.companies.eliasItSolutions,
                 jobs.companies.mgm,
                 jobs.companies.pokec,
+                jobs.companies.digitoo,
             ],
-            [jobs.projects.estateVoke],
+            [jobs.projects.estateVoke, jobs.projects.digitoo],
             90,
-            L.get("best CI")
+            defineMessage({
+                id: "db.skills.utilities.gitlab.description",
+                defaultMessage: "best CI",
+            })
         ),
         bitbucket: new Utility(
             "bitbucket",
-            "BitBucket CI",
+            defineMessage({id: "db.skills.utilities.bitbucket.label", defaultMessage: "BitBucket CI"}),
             createImg(imgBitbucket),
             "https://bitbucket.com",
             [jobs.companies.eliasItSolutions, jobs.companies.sprinx],
             [jobs.projects.benefitPlus],
             60,
-            L.get("alt CI")
+            defineMessage({
+                id: "db.skills.utilities.bitbucket.description",
+                defaultMessage: "alt CI",
+            })
         ),
         jenkins: new Utility(
             "jenkins",
-            "Jenkins",
+            defineMessage({id: "db.skills.utilities.jenkins.label", defaultMessage: "Jenkins"}),
             createImg(imgJenkins),
             "https://jenkins.io",
             [jobs.companies.eliasItSolutions],
             [jobs.projects.emu],
             20,
-            L.get("custom CI")
+            defineMessage({
+                id: "db.skills.utilities.jenkins.description",
+                defaultMessage: "custom CI",
+            })
         ),
-        /*pwa: new Utility(
-            "pwa",
-            "PWA",
-            createImg(imgPwa),
-            "https://web.dev/progressive-web-apps/",
-            [jobs.companies.eliasItSolutions],
-            [jobs.projects.benefitPlus],
-            14,
-            L.get("progress")
-        ),*/
         travisCi: new Utility(
             "travisCi",
-            "Travis CI",
+            defineMessage({id: "db.skills.utilities.travisCi.label", defaultMessage: "Travis CI"}),
             createImg(imgTravisCi),
             "https://travis-ci.org",
             [jobs.companies.freelancer],
             [jobs.projects.cucumberGenerator, jobs.projects.mailtrapClient],
             24,
-            L.get("Github CI")
+            defineMessage({
+                id: "db.skills.utilities.travisCi.description",
+                defaultMessage: "Travis CI",
+            })
         ),
         webpack: new Utility(
             "webpack",
-            "Webpack",
+            defineMessage({id: "db.skills.utilities.webpack.label", defaultMessage: "Webpack"}),
             createImg(imgWebpack),
             "https://webpack.js.org",
             [jobs.companies.freelancer, jobs.companies.eliasItSolutions, jobs.companies.sprinx],
             [jobs.projects.emu, jobs.projects.benefitPlus],
             32,
-            L.get("all together")
+            defineMessage({
+                id: "db.skills.utilities.webpack.description",
+                defaultMessage: "all together",
+            })
         ),
         cucumber: new Utility(
             "cucumber",
-            "Cucumber",
+            defineMessage({id: "db.skills.utilities.cucumber.label", defaultMessage: "Cucumber"}),
             createImg(imgCucumber),
             "https://cucumber.io",
             [jobs.companies.freelancer, jobs.companies.eliasItSolutions],
             [],
             46,
-            L.get("dummy testing")
+            defineMessage({
+                id: "db.skills.utilities.cucumber.description",
+                defaultMessage: "dummy testing",
+            })
         ),
         ann: new Utility(
             "ann",
-            "ANN",
+            defineMessage({id: "db.skills.utilities.ann.label", defaultMessage: "ANN"}),
             createImg(imgANN),
             "https://en.wikipedia.org/wiki/Artificial_neural_network",
             [jobs.schools.friIng],
             [],
             10,
-            L.get("machine learning")
+            defineMessage({
+                id: "db.skills.utilities.ann.description",
+                defaultMessage: "machine learning",
+            })
+        ),
+        docker: new Utility(
+            "docker",
+            defineMessage({id: "db.skills.utilities.docker.label", defaultMessage: "Docker"}),
+            createImg(imgDocker),
+            "https://www.docker.com",
+            [jobs.schools.friIng, jobs.companies.freelancer, jobs.companies.sprinx, jobs.companies.digitoo],
+            [jobs.projects.digitoo, jobs.projects.benefitPlus],
+            68,
+            defineMessage({
+                id: "db.skills.utilities.docker.description",
+                defaultMessage: "isolation",
+            })
+        ),
+        dockerCompose: new Utility(
+            "dockerCompose",
+            defineMessage({id: "db.skills.utilities.dockerCompose.label", defaultMessage: "Docker compose"}),
+            createImg(imgDockerCompose),
+            "https://docs.docker.com/compose/",
+            [jobs.schools.friIng, jobs.companies.freelancer, jobs.companies.sprinx, jobs.projects.digitoo],
+            [jobs.projects.digitoo, jobs.projects.benefitPlus],
+            78,
+            defineMessage({
+                id: "db.skills.utilities.dockerCompose.description",
+                defaultMessage: "composer",
+            })
         ),
     },
 };

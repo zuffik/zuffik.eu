@@ -3,6 +3,8 @@ import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Skill as SkillType} from "../../types/skills/Skill";
 import {Typography} from "@material-ui/core";
 import {Card} from "../elements/Card";
+import classNames from "classnames";
+import {useIntl} from "react-intl";
 
 interface Props {
     skill: SkillType;
@@ -24,13 +26,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     image: {
         height: 75,
     },
-    title: (props: Props) => ({
-        fontSize: theme.typography.pxToRem(props.skill.label.split(" ").length === 1 ? 24 : 18),
-        paddingTop: props.skill.label.split(" ").length === 1 ? 0 : 6,
-        paddingBottom: props.skill.label.split(" ").length === 1 ? 0 : 6,
+    title: {
+        fontSize: theme.typography.pxToRem(24),
+        paddingTop: 0,
+        paddingBottom: 0,
         fontWeight: 500,
         whiteSpace: "nowrap",
-    }),
+    },
+    titleWithWhitespace: {
+        fontSize: theme.typography.pxToRem(18),
+        paddingTop: 6,
+        paddingBottom: 6,
+    },
     description: {
         fontSize: theme.typography.pxToRem(12),
         height: 18,
@@ -42,11 +49,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const Skill: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
     const Image = props.skill.image;
+    const intl = useIntl();
     return (
         <Card classes={{root: styles.root}}>
             <Image className={styles.image} />
-            <Typography classes={{root: styles.title}}>{props.skill.label}</Typography>
-            <Typography classes={{root: styles.description}}>{props.skill.description || ""}</Typography>
+            <Typography
+                classes={{
+                    root: classNames(styles.title, {
+                        [styles.titleWithWhitespace]: intl.formatMessage(props.skill.label).includes(" "),
+                    }),
+                }}
+            >
+                {intl.formatMessage(props.skill.label)}
+            </Typography>
+            <Typography classes={{root: styles.description}}>
+                {props.skill.description ? intl.formatMessage(props.skill.description) : ""}
+            </Typography>
             <Typography classes={{root: styles.knowledge}}>{props.skill.knowledge}%</Typography>
         </Card>
     );

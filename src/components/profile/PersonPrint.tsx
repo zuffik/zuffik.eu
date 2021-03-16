@@ -3,6 +3,7 @@ import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Person} from "../../types/person/Person";
 import {Avatar, Grid, Typography} from "@material-ui/core";
 import {SectionTitle} from "../section/SectionTitle";
+import {useIntl} from "react-intl";
 
 interface Props {
     person: Person;
@@ -25,6 +26,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export const PersonPrint: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
+    const intl = useIntl();
+
     return (
         <Grid container justify="space-between" classes={{root: styles.root}}>
             <Grid item>
@@ -32,7 +35,9 @@ export const PersonPrint: React.FC<Props> = (props: Props): React.ReactElement =
             </Grid>
             <Grid item>
                 <SectionTitle>{props.person.fullName}</SectionTitle>
-                <Typography classes={{root: styles.highlights}}>{props.person.highlights}</Typography>
+                <Typography classes={{root: styles.highlights}}>
+                    {props.person.highlights ? intl.formatMessage(props.person.highlights) : ""}
+                </Typography>
             </Grid>
         </Grid>
     );

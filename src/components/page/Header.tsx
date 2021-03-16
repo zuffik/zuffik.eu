@@ -2,11 +2,12 @@ import * as React from "react";
 import {Logo} from "../elements/Logo";
 import {SectionTitle} from "../section/SectionTitle";
 import {Box, Typography} from "@material-ui/core";
-import {L} from "../../modules/i18n/Locale";
+import {useIntl} from "react-intl";
 
 interface Props {}
 
 export const Header: React.FC<Props> = (props: Props): React.ReactElement => {
+    const intl = useIntl();
     return (
         <>
             <Box
@@ -19,7 +20,10 @@ export const Header: React.FC<Props> = (props: Props): React.ReactElement => {
                 <Logo size={16} />
                 <SectionTitle>zuffik.eu</SectionTitle>
                 <Typography variant="h5">
-                    {L.get("Hello, I am zuffik, a fullstack web / QA / DevOps developer.")}
+                    {intl.formatMessage({
+                        defaultMessage: "Hello, I am zuffik, a fullstack web / QA / DevOps developer.",
+                        id: "general.mainTitle",
+                    })}
                 </Typography>
             </Box>
         </>
