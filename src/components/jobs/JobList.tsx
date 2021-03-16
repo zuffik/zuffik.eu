@@ -6,6 +6,7 @@ import {Company} from "../../types/jobs/Company";
 import {SectionTitle} from "../section/SectionTitle";
 import {Grid} from "@material-ui/core";
 import {Job} from "./Job";
+import * as _ from "lodash";
 
 interface Props {
     companies: Company[];
@@ -24,7 +25,7 @@ export const JobList: React.FC<Props> = (props: Props): React.ReactElement => {
                 })}
             </SectionTitle>
             <Grid container spacing={2} justify="space-between">
-                {props.projects.map((project) => (
+                {_.sortBy(props.projects, "from").map((project) => (
                     <Grid item key={project.id} xs={12} sm={6} lg={4}>
                         <Job job={project} />
                     </Grid>
@@ -37,7 +38,7 @@ export const JobList: React.FC<Props> = (props: Props): React.ReactElement => {
                 })}
             </SectionTitle>
             <Grid container spacing={2} justify="space-between">
-                {props.companies
+                {_.sortBy(props.companies, "from")
                     .filter((j) => !j.hidden)
                     .map((company) => (
                         <Grid item key={company.id} xs={12} sm={6} lg={4}>

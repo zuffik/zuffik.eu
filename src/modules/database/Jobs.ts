@@ -314,7 +314,7 @@ export const jobs = {
                 id: "db.projects.digitoo.description",
                 defaultMessage: "Digitoo application for digital accounting",
             }),
-            moment("2020-10-01")
+            moment("2020-10-02")
         ),
         eset: new Project(
             "eset",
