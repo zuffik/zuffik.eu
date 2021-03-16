@@ -734,7 +734,7 @@ export const skills = {
         ),
         dockerCompose: new Utility(
             "dockerCompose",
-            defineMessage({id: "db.skills.utilities.dockerCompose.label", defaultMessage: "Docker compose"}),
+            defineMessage({id: "db.skills.utilities.dockerCompose.label", defaultMessage: "D. compose"}),
             createImg(imgDockerCompose),
             "https://docs.docker.com/compose/",
             [jobs.schools.friIng, jobs.companies.freelancer, jobs.companies.sprinx, jobs.projects.digitoo],

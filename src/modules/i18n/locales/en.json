@@ -848,7 +848,7 @@
   "db.skills.utilities.dockerCompose.label": [
     {
       "type": 0,
-      "value": "Docker compose"
+      "value": "D. compose"
     }
   ],
   "db.skills.utilities.git.description": [
