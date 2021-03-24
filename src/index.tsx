@@ -9,10 +9,12 @@ import {database} from "./modules/database/Database";
 import {LanguageRouterLayout} from "./components/layout/LanguageRouterLayout";
 import {IntlProvider} from "react-intl";
 import {currentLanguage} from "./modules/i18n/Language";
+import messages from "./modules/i18n/locales";
+console.log(messages);
 
 const App = (props: {}) => (
     <MuiThemeProvider theme={theme}>
-        <IntlProvider locale={currentLanguage}>
+        <IntlProvider locale={currentLanguage} messages={messages[currentLanguage]}>
             <BrowserRouter>
                 <CssBaseline />
                 <DatabaseProvider value={database}>

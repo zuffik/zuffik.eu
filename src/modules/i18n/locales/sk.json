@@ -848,7 +848,7 @@
   "db.skills.utilities.dockerCompose.label": [
     {
       "type": 0,
-      "value": "Docker compose"
+      "value": "D. compose"
     }
   ],
   "db.skills.utilities.git.description": [
@@ -909,6 +909,120 @@
     {
       "type": 0,
       "value": "Webpack"
+    }
+  ],
+  "general.aboutMe": [
+    {
+      "type": 0,
+      "value": "About me"
+    }
+  ],
+  "general.address": [
+    {
+      "type": 0,
+      "value": "Address"
+    }
+  ],
+  "general.birthday": [
+    {
+      "type": 0,
+      "value": "Birthday"
+    }
+  ],
+  "general.career": [
+    {
+      "type": 0,
+      "value": "Career"
+    }
+  ],
+  "general.copyright": [
+    {
+      "type": 0,
+      "value": "All rights reserved."
+    }
+  ],
+  "general.downloadCV": [
+    {
+      "type": 0,
+      "value": "Download my CV"
+    }
+  ],
+  "general.education": [
+    {
+      "type": 0,
+      "value": "Education"
+    }
+  ],
+  "general.educationLevel": [
+    {
+      "type": 0,
+      "value": "Education level"
+    }
+  ],
+  "general.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "general.employment": [
+    {
+      "type": 0,
+      "value": "Employment"
+    }
+  ],
+  "general.languageSkills": [
+    {
+      "type": 0,
+      "value": "Language skills"
+    }
+  ],
+  "general.mainTitle": [
+    {
+      "type": 0,
+      "value": "Hello, I am zuffik, a fullstack web / QA / DevOps developer."
+    }
+  ],
+  "general.now": [
+    {
+      "type": 0,
+      "value": "now"
+    }
+  ],
+  "general.otherKnowledge": [
+    {
+      "type": 0,
+      "value": "Other knowledge"
+    }
+  ],
+  "general.otherSkills": [
+    {
+      "type": 0,
+      "value": "Other skills"
+    }
+  ],
+  "general.personalInfo": [
+    {
+      "type": 0,
+      "value": "Personal information"
+    }
+  ],
+  "general.phone": [
+    {
+      "type": 0,
+      "value": "Phone"
+    }
+  ],
+  "general.projects": [
+    {
+      "type": 0,
+      "value": "Projects"
+    }
+  ],
+  "general.skills": [
+    {
+      "type": 0,
+      "value": "Skills"
     }
   ]
 }

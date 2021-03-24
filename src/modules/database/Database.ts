@@ -35,11 +35,26 @@ export const database = new StaticData(
         ),
         "Medvedzie, 027 44 Tvrdošín, Slovakia",
         {
-            "sk-SK": "C2",
-            "cs-CZ": "C1",
-            "en-US": "B2",
-            "es-ES": "A2",
-            "de-DE": "A1",
+            "sk-SK": {
+                label: defineMessage({id: "db.me.languageSkills.sk-SK", defaultMessage: "Slovak"}),
+                level: "C2",
+            },
+            "cs-CZ": {
+                label: defineMessage({id: "db.me.languageSkills.cs-CZ", defaultMessage: "Czech"}),
+                level: "C1",
+            },
+            "en-US": {
+                label: defineMessage({id: "db.me.languageSkills.en-US", defaultMessage: "English"}),
+                level: "B2",
+            },
+            "es-ES": {
+                label: defineMessage({id: "db.me.languageSkills.es-ES", defaultMessage: "Spanish"}),
+                level: "A2",
+            },
+            "de-DE": {
+                label: defineMessage({id: "db.me.languageSkills.de-DE", defaultMessage: "German"}),
+                level: "A1",
+            },
         },
         "https://s.gravatar.com/avatar/7d40d7be4408965747f2903a4350bd29?s=512",
         "Ing.",

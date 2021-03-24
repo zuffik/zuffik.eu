@@ -10,6 +10,8 @@ import * as _ from "lodash";
 import {Skill} from "../../types/skills/Skill";
 import {makeStyles} from "@material-ui/core/styles";
 import {defineMessage, useIntl} from "react-intl";
+import {Language} from "../../modules/i18n/Language";
+import {LanguageSkill} from "../../types/person/LanguageSkills";
 
 interface Props {
     person: Person;
@@ -114,14 +116,15 @@ export const PrintDocument: React.FC<Props> = (props: Props): React.ReactElement
                 title={intl.formatMessage({defaultMessage: "Language skills", id: "general.languageSkills"})}
             >
                 {
-                    _.entries(props.person.languageSkills).map(([language, skill]) => [
-                        <PrintSectionTitle>
-                            {intl.formatMessage({defaultMessage: language, id: language})}
-                        </PrintSectionTitle>,
-                        <Typography>
-                            {intl.formatMessage({defaultMessage: skill as string, id: skill as string})}
-                        </Typography>,
-                    ]) as [React.ReactNode, React.ReactNode][]
+                    _.keys(props.person.languageSkills).map((language) => {
+                        const skill = (props.person.languageSkills as Record<Language, LanguageSkill>)[
+                            language as Language
+                        ];
+                        return [
+                            <PrintSectionTitle>{intl.formatMessage(skill.label)}</PrintSectionTitle>,
+                            <Typography>{skill.level}</Typography>,
+                        ];
+                    }) as [React.ReactNode, React.ReactNode][]
                 }
             </PrintSection>
             <PrintSection

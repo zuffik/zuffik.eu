@@ -35,7 +35,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "compress:images": "node ./scripts/compress-images.js",
-    "i18n:extract": "formatjs extract 'src/**/!(react-app-env.d.ts)*.ts' --out-file lang/en.json",
+    "i18n:extract": "formatjs extract 'src/**/!(react-app-env.d.ts)*.{ts,tsx}' --out-file lang/en.json",
     "i18n:compile": "formatjs compile lang/en.json --ast --out-file src/modules/i18n/locales/en.json"
   },
   "eslintConfig": {

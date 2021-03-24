@@ -10,7 +10,7 @@ interface Props {
     skill: SkillType;
 }
 
-const maxScaleDown = 0.3;
+const maxScaleDown = 0.2;
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: (props: Props) => ({
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         transform: `scale(${1 - maxScaleDown + (props.skill.knowledge / 100) * maxScaleDown})`,
     }),
     image: {
-        height: 75,
+        height: 70,
     },
     title: {
         fontSize: theme.typography.pxToRem(24),

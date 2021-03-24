@@ -2,6 +2,7 @@ import * as React from "react";
 import {makeStyles, Theme} from "@material-ui/core/styles";
 import {Tooltip} from "@material-ui/core";
 import {Skill} from "../../types/skills/Skill";
+import {useIntl} from "react-intl";
 
 interface Props {
     skill: Skill;
@@ -30,8 +31,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 export const JobSkill: React.FC<Props> = (props: Props): React.ReactElement => {
     const styles = useStyles(props);
     const Image = props.skill.image;
+    const intl = useIntl();
     return (
-        <Tooltip title={props.skill.label}>
+        <Tooltip title={intl.formatMessage(props.skill.label)}>
             <div className={styles.root}>
                 <Image height="100%" />
             </div>

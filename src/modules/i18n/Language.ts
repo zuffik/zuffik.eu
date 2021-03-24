@@ -10,6 +10,12 @@ export type Language = "en-US" | "cs-CZ" | "sk-SK" | "es-ES";
 export type Shorthands = "en" | "cz" | "sk" | "es";
 export const shorthands: Shorthands[] = ["en", "cz", "sk", "es"];
 export const languages: Language[] = ["en-US", "cs-CZ", "sk-SK", "es-ES"];
+const shorthandMap: Record<Shorthands, Language> = {
+    en: "en-US",
+    sk: "sk-SK",
+    cz: "cs-CZ",
+    es: "es-ES",
+};
 
 export const defaultLanguage = getDefaultLanguage();
 export const currentLanguage = getLanguageFromLocation(window.location);
@@ -19,7 +25,8 @@ export const currentShortLanguage = currentLanguage.substr(0, 2);
 
 export function getLanguageFromLocation(location: H.Location | Location): Language {
     const m = new RegExp(`^\\/(${shorthands.join("|")})`).exec(location.pathname);
-    return ((m && m[1]) || defaultLanguage) as Language;
+    const lang = (m && m[1]) || defaultLanguage;
+    return lang.length === 2 ? shorthandMap[lang as Shorthands] : (lang as Language);
 }
 
 export function getDefaultLanguage(): Language {
