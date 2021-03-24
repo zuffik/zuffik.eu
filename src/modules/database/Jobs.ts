@@ -233,7 +233,7 @@ export const jobs = {
                 defaultMessage: "Svadobné dekorácie",
             }),
             createImg(imgSvadobneDekoracie),
-            "https://penziontimea.sk/",
+            "http://svadobnedekoracie.sk/",
             defineMessage({
                 id: "db.projects.svadobnedekoracie.description",
                 defaultMessage:
