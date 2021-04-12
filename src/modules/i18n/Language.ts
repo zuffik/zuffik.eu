@@ -7,6 +7,7 @@ import * as H from "history";
 
 export type Language = "en-US" | "cs-CZ" | "sk-SK" | "es-ES";
 
+const fallbackLanguage: Language = 'en-US';
 export type Shorthands = "en" | "cz" | "sk" | "es";
 export const shorthands: Shorthands[] = ["en", "cz", "sk", "es"];
 export const languages: Language[] = ["en-US", "cs-CZ", "sk-SK", "es-ES"];
@@ -32,17 +33,17 @@ export function getLanguageFromLocation(location: H.Location | Location): Langua
 export function getDefaultLanguage(): Language {
     let lang: Language = navigator.language || (navigator as any).userLanguage;
     if (!lang) {
-        lang = "en-US";
+        lang = fallbackLanguage;
     }
     if (lang.length === 2) {
-        lang = shorthandMap[lang as Shorthands];
+        lang = shorthandMap[lang.toLowerCase() as Shorthands] || fallbackLanguage;
     }
     const spl = lang.split("-");
     lang = [spl[0], spl[1].toUpperCase()].join("-") as Language;
     if (!languages.includes(lang)) {
-        lang = "en-US";
+        lang = fallbackLanguage;
     }
-    return lang || "en-US";
+    return lang || fallbackLanguage;
 }
 
 export function languageToMomentLanguage(lang: Language): string {
