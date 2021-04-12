@@ -30,12 +30,15 @@ export function getLanguageFromLocation(location: H.Location | Location): Langua
 }
 
 export function getDefaultLanguage(): Language {
-    let lang = navigator.language || (navigator as any).userLanguage;
+    let lang: Language = navigator.language || (navigator as any).userLanguage;
     if (!lang) {
         lang = "en-US";
     }
+    if (lang.length === 2) {
+        lang = shorthandMap[lang as Shorthands];
+    }
     const spl = lang.split("-");
-    lang = [spl[0], spl[1].toUpperCase()].join("-");
+    lang = [spl[0], spl[1].toUpperCase()].join("-") as Language;
     if (!languages.includes(lang)) {
         lang = "en-US";
     }
