@@ -18,6 +18,7 @@ import imgSvadobneDekoracie from "../../static/jobs/projects/svadobnedekoracie.p
 import imgNpm from "../../static/jobs/projects/npm.svg";
 import imgDigitooProject from "../../static/jobs/projects/digitoo.png";
 import imgEset from "../../static/jobs/projects/eset.svg";
+import imgPatria from "../../static/jobs/projects/patria.svg";
 import imgMGM from "../../static/jobs/companies/mgm.png";
 import imgPokec from "../../static/jobs/companies/pokec.png";
 import imgSprinx from "../../static/jobs/companies/sprinx.png";
@@ -116,7 +117,7 @@ export const jobs = {
             createImg(imgSprinx),
             "http://sprinx.com",
             moment("2020-07-01"),
-            undefined,
+            moment("2021-07-01"),
             defineMessage({
                 id: "db.companies.sprinx.description",
                 defaultMessage: "Steady, full time job as senior frontend developer.",
@@ -328,7 +329,22 @@ export const jobs = {
                 id: "db.projects.eset.description",
                 defaultMessage: "Cart handling and licence renewal for eset antivirus",
             }),
-            moment("2020-03-01")
+            moment("2020-03-01"),
+            moment("2021-07-01")
+        ),
+        patria: new Project(
+            "patria",
+            defineMessage({
+                id: "db.projects.patria.label",
+                defaultMessage: "Patria",
+            }),
+            createImg(imgPatria),
+            "https://patria.sk",
+            defineMessage({
+                id: "db.projects.patria.description",
+                defaultMessage: "Business website for local car mechanic service",
+            }),
+            moment("2021-07-01")
         ),
     },
     schools: {

@@ -14,6 +14,7 @@ import imgIonic from "../../static/skills/frameworks/ionic.svg";
 import imgLaravel from "../../static/skills/frameworks/laravel.svg";
 import imgGraphql from "../../static/skills/frameworks/graphql.svg";
 import imgNestjs from "../../static/skills/frameworks/nestjs.svg";
+import imgNextjs from "../../static/skills/frameworks/nextjs.svg";
 import imgNodejs from "../../static/skills/frameworks/nodejs.svg";
 import imgReact from "../../static/skills/frameworks/react.svg";
 import imgTypescript from "../../static/skills/frameworks/typescript.svg";
@@ -54,6 +55,7 @@ import imgTravisCi from "../../static/skills/utilities/travis-ci.svg";
 import imgWebpack from "../../static/skills/utilities/webpack.svg";
 import imgDocker from "../../static/skills/utilities/docker.svg";
 import imgDockerCompose from "../../static/skills/utilities/docker-compose.png";
+import {Project} from "../../types/jobs/Project";
 //import imgPwa from "../../static/skills/utilities/pwa.svg";
 
 export const skills = {
@@ -141,6 +143,19 @@ export const skills = {
                 defaultMessage: "I ♥ it",
             })
         ),
+        nextjs: new Framework(
+            "nextjs",
+            defineMessage({id: "db.skills.frameworks.nextjs.label", defaultMessage: "next.js"}),
+            createImg(imgNextjs),
+            "https://nextjs.org",
+            [jobs.companies.freelancer],
+            [jobs.projects.patria],
+            30,
+            defineMessage({
+                id: "db.skills.frameworks.nextjs.description",
+                defaultMessage: "React SSR",
+            })
+        ),
         nodejs: new Framework(
             "nodejs",
             defineMessage({id: "db.skills.frameworks.nodejs.label", defaultMessage: "Node.js"}),
@@ -153,6 +168,7 @@ export const skills = {
                 jobs.projects.mailtrapClient,
                 jobs.projects.cucumberGenerator,
                 jobs.projects.digitoo,
+                jobs.projects.patria,
             ],
             80,
             defineMessage({
@@ -173,6 +189,7 @@ export const skills = {
                 jobs.projects.digitoo,
                 jobs.projects.benefitPlus,
                 jobs.projects.eset,
+                jobs.projects.patria,
             ],
             90,
             defineMessage({
@@ -279,7 +296,7 @@ export const skills = {
                 jobs.companies.sprinx,
                 jobs.companies.digitoo,
             ],
-            [jobs.projects.benefitPlus, jobs.projects.digitoo],
+            [jobs.projects.benefitPlus, jobs.projects.digitoo, jobs.projects.patria],
             76,
             defineMessage({
                 id: "db.skills.frameworks.materialUi.description",
@@ -315,6 +332,7 @@ export const skills = {
                 jobs.projects.mailtrapClient,
                 jobs.projects.digitoo,
                 jobs.projects.eset,
+                jobs.projects.patria,
             ],
             99,
             defineMessage({
@@ -446,7 +464,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects).filter(
                 (p) => !["fitradio", "cucumberGenerator", "mailtrapClient"].includes(p.id)
-            ),
+            ) as Project[],
             99,
             defineMessage({
                 id: "db.skills.languages.css.description",
@@ -461,7 +479,7 @@ export const skills = {
             [..._.values(jobs.companies), ..._.values(jobs.schools)],
             _.values(jobs.projects).filter(
                 (p) => !["fitradio", "cucumberGenerator", "mailtrapClient"].includes(p.id)
-            ),
+            ) as Project[],
             99,
             defineMessage({
                 id: "db.skills.languages.html.description",
@@ -601,7 +619,7 @@ export const skills = {
             createImg(imgAws),
             "https://aws.amazon.com",
             [jobs.companies.eliasItSolutions, jobs.companies.freelancer],
-            [],
+            [jobs.projects.patria],
             10,
             defineMessage({
                 id: "db.skills.utilities.aws.description",
@@ -725,7 +743,7 @@ export const skills = {
             createImg(imgDocker),
             "https://www.docker.com",
             [jobs.schools.friIng, jobs.companies.freelancer, jobs.companies.sprinx, jobs.companies.digitoo],
-            [jobs.projects.digitoo, jobs.projects.benefitPlus],
+            [jobs.projects.digitoo, jobs.projects.benefitPlus, jobs.projects.patria],
             68,
             defineMessage({
                 id: "db.skills.utilities.docker.description",
