@@ -68,7 +68,7 @@
     "@types/react-router-dom": "5.1.7",
     "babel-plugin-formatjs": "9.2.5",
     "glob": "7.1.6",
-    "node-fetch": "2.6.1"
+    "node-fetch": "2.6.7"
   },
   "husky": {
     "hooks": {
