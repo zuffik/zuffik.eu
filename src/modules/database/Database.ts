@@ -75,7 +75,7 @@ export const database = new StaticData(
             defineMessage({id: "db.me.otherSkills.dataStructures", defaultMessage: "Data structures"}),
             defineMessage({
                 id: "db.me.otherSkills.driverLicence",
-                defaultMessage: "A, B driver licence (200 000km driven)",
+                defaultMessage: "A, B driver licence (300 000km driven)",
             }),
         ]
     ),

@@ -19,10 +19,14 @@ import imgNpm from "../../static/jobs/projects/npm.svg";
 import imgDigitooProject from "../../static/jobs/projects/digitoo.png";
 import imgEset from "../../static/jobs/projects/eset.svg";
 import imgPatria from "../../static/jobs/projects/patria.svg";
+import imgIbm from "../../static/jobs/projects/ibm.svg";
+import imgTwigseeProject from "../../static/jobs/projects/twigsee.svg";
 import imgMGM from "../../static/jobs/companies/mgm.png";
 import imgPokec from "../../static/jobs/companies/pokec.png";
 import imgSprinx from "../../static/jobs/companies/sprinx.png";
 import imgDigitooCompany from "../../static/jobs/companies/digitoo.svg";
+import imgBrainsoft from "../../static/jobs/companies/brainsoft.jpeg";
+import imgTwigseeCompany from "../../static/jobs/companies/twigsee.svg";
 import imgFRI from "../../static/jobs/schools/fri.png";
 import imgSSTV from "../../static/jobs/schools/sstv.png";
 
@@ -145,6 +149,44 @@ export const jobs = {
             defineMessage({
                 id: "db.companies.digitoo.primaryTask",
                 defaultMessage: "Digitoo is startup platform for accountants .",
+            })
+        ),
+        brainsoft: new Company(
+            "brainsoft",
+            defineMessage({
+                id: "db.companies.brainsoft.label",
+                defaultMessage: "Brainsoft",
+            }),
+            createImg(imgBrainsoft),
+            "https://brainsoft.eu",
+            moment("2022-04-01"),
+            undefined,
+            defineMessage({
+                id: "db.companies.brainsoft.description",
+                defaultMessage: "Frontend developer for IBM research portal",
+            }),
+            defineMessage({
+                id: "db.companies.brainsoft.primaryTask",
+                defaultMessage: "Maintain next.js website",
+            })
+        ),
+        twigsee: new Company(
+            "twigsee",
+            defineMessage({
+                id: "db.companies.twigsee.label",
+                defaultMessage: "Twigsee",
+            }),
+            createImg(imgTwigseeCompany),
+            "https://twigsee.com",
+            moment("2022-08-01"),
+            undefined,
+            defineMessage({
+                id: "db.companies.twigsee.description",
+                defaultMessage: "Consultations and improvements for React app",
+            }),
+            defineMessage({
+                id: "db.companies.twigsee.primaryTask",
+                defaultMessage: "Propose improvements for pre-school CRA web app",
             })
         ),
     },
@@ -331,6 +373,34 @@ export const jobs = {
             }),
             moment("2020-03-01"),
             moment("2021-07-01")
+        ),
+        ibm: new Project(
+            "ibm",
+            defineMessage({
+                id: "db.projects.ibm.label",
+                defaultMessage: "IBM Research",
+            }),
+            createImg(imgIbm),
+            "https://research.ibm.com",
+            defineMessage({
+                id: "db.projects.ibm.description",
+                defaultMessage: "Frontend web for IBM Research portal.",
+            }),
+            moment("2022-04-01")
+        ),
+        twigsee: new Project(
+            "twigsee",
+            defineMessage({
+                id: "db.projects.twigsee.label",
+                defaultMessage: "Twigsee",
+            }),
+            createImg(imgTwigseeProject),
+            "https://twigsee.com",
+            defineMessage({
+                id: "db.projects.twigsee.description",
+                defaultMessage: "Web app for teachers and parents in pre-school establishment.",
+            }),
+            moment("2022-08-01")
         ),
         patria: new Project(
             "patria",

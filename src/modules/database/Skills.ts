@@ -56,7 +56,6 @@ import imgWebpack from "../../static/skills/utilities/webpack.svg";
 import imgDocker from "../../static/skills/utilities/docker.svg";
 import imgDockerCompose from "../../static/skills/utilities/docker-compose.png";
 import {Project} from "../../types/jobs/Project";
-//import imgPwa from "../../static/skills/utilities/pwa.svg";
 
 export const skills = {
     frameworks: {
@@ -122,8 +121,9 @@ export const skills = {
                 jobs.schools.friBc,
                 jobs.schools.friIng,
                 jobs.companies.digitoo,
+                jobs.companies.brainsoft,
             ],
-            [jobs.projects.digitoo],
+            [jobs.projects.digitoo, jobs.projects.ibm],
             60,
             defineMessage({
                 id: "db.skills.frameworks.graphql.description",
@@ -148,9 +148,9 @@ export const skills = {
             defineMessage({id: "db.skills.frameworks.nextjs.label", defaultMessage: "next.js"}),
             createImg(imgNextjs),
             "https://nextjs.org",
-            [jobs.companies.freelancer],
-            [jobs.projects.patria],
-            30,
+            [jobs.companies.freelancer, jobs.companies.brainsoft],
+            [jobs.projects.patria, jobs.projects.ibm],
+            80,
             defineMessage({
                 id: "db.skills.frameworks.nextjs.description",
                 defaultMessage: "React SSR",
@@ -161,7 +161,13 @@ export const skills = {
             defineMessage({id: "db.skills.frameworks.nodejs.label", defaultMessage: "Node.js"}),
             createImg(imgNodejs),
             "https://nodejs.org",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+                jobs.companies.brainsoft,
+                jobs.companies.twigsee,
+            ],
             [
                 jobs.projects.benefitPlus,
                 jobs.projects.emu,
@@ -169,6 +175,8 @@ export const skills = {
                 jobs.projects.cucumberGenerator,
                 jobs.projects.digitoo,
                 jobs.projects.patria,
+                jobs.projects.ibm,
+                jobs.projects.twigsee,
             ],
             80,
             defineMessage({
@@ -181,7 +189,13 @@ export const skills = {
             defineMessage({id: "db.skills.frameworks.react.label", defaultMessage: "React"}),
             createImg(imgReact),
             "https://react.com",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+                jobs.companies.brainsoft,
+                jobs.companies.twigsee,
+            ],
             [
                 jobs.projects.benefitPlus,
                 jobs.projects.emu,
@@ -190,6 +204,8 @@ export const skills = {
                 jobs.projects.benefitPlus,
                 jobs.projects.eset,
                 jobs.projects.patria,
+                jobs.projects.twigsee,
+                jobs.projects.ibm,
             ],
             90,
             defineMessage({
@@ -215,8 +231,8 @@ export const skills = {
             defineMessage({id: "db.skills.frameworks.vuejs.label", defaultMessage: "Vue.js"}),
             createImg(imgVuejs),
             "https://vuejs.org",
-            [jobs.companies.eliasItSolutions],
-            [],
+            [jobs.companies.eliasItSolutions, jobs.companies.digitoo],
+            [jobs.projects.digitoo],
             20,
             defineMessage({
                 id: "db.skills.frameworks.vuejs.description",
@@ -228,8 +244,8 @@ export const skills = {
             defineMessage({id: "db.skills.frameworks.cypress.label", defaultMessage: "Cypress"}),
             createImg(imgCypress),
             "https://cypress.io",
-            [jobs.companies.digitoo],
-            [jobs.projects.digitoo],
+            [jobs.companies.digitoo, jobs.companies.twigsee],
+            [jobs.projects.digitoo, jobs.projects.twigsee],
             48,
             defineMessage({
                 id: "db.skills.frameworks.cypress.description",
@@ -277,8 +293,9 @@ export const skills = {
                 jobs.companies.freelancer,
                 jobs.companies.sprinx,
                 jobs.companies.digitoo,
+                jobs.companies.twigsee,
             ],
-            [jobs.projects.benefitPlus, jobs.projects.emu, jobs.projects.digitoo],
+            [jobs.projects.benefitPlus, jobs.projects.emu, jobs.projects.digitoo, jobs.projects.twigsee],
             83,
             defineMessage({
                 id: "db.skills.frameworks.jest.description",
@@ -295,8 +312,9 @@ export const skills = {
                 jobs.companies.freelancer,
                 jobs.companies.sprinx,
                 jobs.companies.digitoo,
+                jobs.companies.twigsee,
             ],
-            [jobs.projects.benefitPlus, jobs.projects.digitoo, jobs.projects.patria],
+            [jobs.projects.benefitPlus, jobs.projects.digitoo, jobs.projects.patria, jobs.projects.twigsee],
             76,
             defineMessage({
                 id: "db.skills.frameworks.materialUi.description",
@@ -323,7 +341,13 @@ export const skills = {
             defineMessage({id: "db.skills.languages.typescript.label", defaultMessage: "TypeScript"}),
             createImg(imgTypescript),
             "https://typescriptlang.org",
-            [jobs.companies.eliasItSolutions, jobs.companies.sprinx, jobs.companies.digitoo],
+            [
+                jobs.companies.eliasItSolutions,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+                jobs.companies.brainsoft,
+                jobs.companies.twigsee,
+            ],
             [
                 jobs.projects.benefitPlus,
                 jobs.projects.emu,
@@ -333,6 +357,8 @@ export const skills = {
                 jobs.projects.digitoo,
                 jobs.projects.eset,
                 jobs.projects.patria,
+                jobs.projects.twigsee,
+                jobs.projects.ibm,
             ],
             99,
             defineMessage({
@@ -742,8 +768,15 @@ export const skills = {
             defineMessage({id: "db.skills.utilities.docker.label", defaultMessage: "Docker"}),
             createImg(imgDocker),
             "https://www.docker.com",
-            [jobs.schools.friIng, jobs.companies.freelancer, jobs.companies.sprinx, jobs.companies.digitoo],
-            [jobs.projects.digitoo, jobs.projects.benefitPlus, jobs.projects.patria],
+            [
+                jobs.schools.friIng,
+                jobs.companies.freelancer,
+                jobs.companies.sprinx,
+                jobs.companies.digitoo,
+                jobs.companies.brainsoft,
+                jobs.companies.twigsee,
+            ],
+            [jobs.projects.digitoo, jobs.projects.benefitPlus, jobs.projects.patria, jobs.projects.twigsee],
             68,
             defineMessage({
                 id: "db.skills.utilities.docker.description",
